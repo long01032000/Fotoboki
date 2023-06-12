@@ -1,0 +1,207 @@
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 25px;
+  width: 50%;
+  height: 100vh;
+  .login-item-1 {
+    margin: 11.5rem 7.3rem;
+    .title {
+      
+      h1 {
+        font-style: normal;
+        font-weight: $fw-7;
+        font-size: 40px;
+        line-height: $lh-2;
+        color: $color-text-1;
+      }
+      span {
+        
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: $color-text-4;
+      }
+    }
+    .button {
+      margin-top: $lh-2;
+      display: flex;
+      flex-direction: row;
+      
+      align-items: flex-start;
+      padding: 0rem;
+
+      .ant-space {
+        gap: 2.5rem !important;
+        .ant-space-item {
+          button {
+            border: 2px solid $color-button-solid-1;
+
+            width: 13.438rem;
+            height: 3.75rem;
+            img {
+              padding-bottom: 0.625rem;
+            }
+            .google-text {
+              font-style: normal;
+              font-weight: $fw-5;
+              font-size: $fs-text-2;
+              padding: 0.625rem 0.625rem;
+              color: $color-text-1;
+            }
+            .facebook-text {
+              font-style: normal;
+              font-weight: $fw-5;
+              font-size: $fs-text-2;
+              padding: 0.625rem 0.625rem;
+              color: $color-text-1;
+            }
+          }
+        }
+      }
+    }
+    .nav-text {
+      padding: $pd-2 $pd-075;
+      h2 {
+        width: 453px;
+        text-align: center;
+        border-bottom: 1px solid $color-text-4;
+        line-height: 0.1em;
+        margin: 10px 0 20px;
+
+        span {
+          background: $color-background-3;
+          padding: 0 $pd-075;
+          font-weight: $fw-5;
+          font-size: $fs-text-1;
+          color: $color-text-4;
+          text-align: center;
+        }
+      }
+    }
+    .login-form {
+      .ant-form {
+        .ant-form-item {
+          .ant-row {
+            .ant-col {
+              .ant-form-item-control-input {
+                .ant-form-item-control-input-content {
+                  button {
+                    width: 453px;
+                    height: 64px;
+                    background: #fa7436;
+                    border-radius: 10px;
+                    span {
+                      font-weight: $fw-7;
+                      font-size: $fs-body-1;
+                      line-height: $lh-2;
+                    }
+                  }
+                  .register{
+                    font-weight: $fw-4;
+                    font-size: $fs-text-1;
+                    line-height: $lh-2;
+                    color: $color-text-4;
+                    a{
+                      color:$color-primary-main-1;
+                      font-weight: $fw-7;
+                      text-decoration: none;
+                    }
+                  }
+                  padding: 0 12px;
+                  .ant-input-affix-wrapper {
+                    align-items: center;
+                    gap: 10px;
+                    color: $color-button-solid-1;
+                    width: 453px;
+                    height: 64px;
+                    padding: 17px 0 17px 5px;
+                    background: rgba(250, 116, 54, 0.1);
+                    border: 2px solid $color-button-solid-1;
+                    border-radius: 10px;
+                    .ant-input-prefix {
+                      img {
+                        width: 30px;
+                        height: 30px;
+                      }
+                    }
+                    ::placeholder {
+                      color: $color-button-solid-1;
+                      font-weight: $fw-4;
+                      font-size: $fs-text-1;
+                    }
+                    .ant-input-suffix {
+                      span {
+                        color: $color-button-solid-1;
+                        padding: 17px; 
+                        svg{
+                          /* eye-slash */
+                        width: $fs-body-1;
+                        height: $fs-body-1;
+                        }                       
+                      }
+                    }
+                    input {
+                      background:none;
+                      cursor: inherit;  
+                      box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 100px transparent;
+                    }
+                    input:-webkit-autofill,
+                    input:-webkit-autofill:focus {
+                      transition: background-color 600000s 0s, color 600000s 0s;
+                      font-family: 'Poppins', sans-serif;
+                    }
+                  }
+                  .ant-checkbox-wrapper {
+                    padding-right: 9.7rem;
+                    .ant-checkbox {
+                      .ant-checkbox-input {
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid $color-button-solid-1;
+                      }
+                      .ant-checkbox-inner {
+                        border: 1px solid $color-button-solid-1;
+                      }
+                    }
+                    span {
+                      font-style: normal;
+                      font-weight: $fw-4;
+                      font-size: $fs-text-1;
+                      color: $color-text-4;
+                      line-height: $lh-2;
+                    }
+                    .ant-checkbox-checked {
+                      .ant-checkbox-inner {
+                        background-color: $color-background-1;
+                      }
+                    }
+                    .ant-checkbox-checked:after {
+                      border: 2px solid $color-background-1;
+                    }
+                  }
+                  .login-form-forgot {
+                    font-weight: $fw-6;
+                    font-size: $fs-text-1;
+                    line-height: $lh-2;
+                    text-decoration: none;
+                    color: $color-primary-main-1;
+                  }
+                }
+              }
+              div {
+                .ant-form-item-explain {
+                  .ant-form-item-explain-error {
+                    padding: 0 12px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

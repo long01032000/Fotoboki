@@ -1,0 +1,21 @@
+.login {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: $color-background-3;
+  overflow-x: hidden;
+
+  .row {
+    .right-side {
+      width: 50%;
+      height: 100vh;
+      background-image: url(../../../img/rightside.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      .login-item-2 {
+      }
+    }
+  }
+}
