@@ -10,7 +10,9 @@ import Home from "./pages/Home/Home";
 import ResponsiveItem from "./HOC/ResponsiveItem/ResponsiveItem";
 import { store } from "./redux/configStore";
 import Login from "./pages/Login/Login";
-import RegisterForm from "./components/RegisterForm/RegisterForm";
+import Register from "./pages/Register/Register";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import OTP from "./pages/OTP/OTP";
 
 // import {} from 'react-router-dom'
 const root = ReactDOM.createRoot(
@@ -26,7 +28,9 @@ root.render(
           <Route path="*" element={<Navigate to="" />}></Route>
         </Route>
         <Route path="login" element={<Login/>}></Route>
-        <Route path="register" element={<RegisterForm/>}></Route>
+        <Route path="register" element={<Register/>}></Route>
+        <Route path="forgotpassword" element={<ForgotPassword/>}></Route>
+        <Route path="otp" element={<OTP/>}></Route>
       </Routes>
     </BrowserRouter>
   </Provider>

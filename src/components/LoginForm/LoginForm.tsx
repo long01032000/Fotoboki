@@ -46,11 +46,10 @@ export default function LoginForm({}: Props) {
               {
                 type: "email",
                 message: "The input is not valid E-mail!",
-              },
-              {
-                required: true,
-                message: "Please input your E-mail!",
-              },
+              },     
+              { required: true, 
+                message: "Please input your Username!" 
+              }
             ]}
           >
             <Input
@@ -63,6 +62,7 @@ export default function LoginForm({}: Props) {
             rules={[
               { required: true, message: "Please input your Password!" },
             ]}
+            
           >
             <Input.Password
               prefix={<img src="Image/shieldSlash.svg" alt="Password">               
@@ -75,10 +75,10 @@ export default function LoginForm({}: Props) {
             <Form.Item name="remember" valuePropName="checked" noStyle>
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
-
-            <a className="login-form-forgot" href="">
+            
+            <NavLink className="login-form-forgot" to="/forgotpassword">
               Forgot password?
-            </a>
+            </NavLink>
           </Form.Item>
 
           <Form.Item>
@@ -87,7 +87,7 @@ export default function LoginForm({}: Props) {
               htmlType="submit"
               className="login-form-button"
             >
-              Log in
+              LOG IN
             </Button>
             <div className="register text-center mt-3">
               Don’t have account? <NavLink to="/register">Create an account</NavLink>

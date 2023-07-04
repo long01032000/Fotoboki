@@ -1,0 +1,89 @@
+.left-side {
+  width: 50%;
+  height: 100vh;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  .otp-item-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .title {
+      h1 {
+        @media screen and (max-width: 1536px) {
+          @include text($fs-text-4, $fw-7, $color-text-1);
+        }
+        @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
+      }
+      span {
+        @media screen and (max-width: 1536px) {
+          @include text($fs-text-1, $fw-4, $color-text-4, $lh-3);
+        }
+        @include text($fs-body-1, $fw-4, $color-text-4, $lh-3);
+      }
+      .nav-text {
+        @media screen and (max-width: 1536px) {
+          @include text($fs-text-1, $fw-6, $color-primary-main-1, $lh-3);
+        }
+        @include text($fs-body-1, $fw-6, $color-primary-main-1, $lh-3);
+      }
+    }
+    .otp-content {
+      display: flex;
+      gap: 10px;
+      margin-top: 1.5rem;
+      justify-items: center;
+      text-align: center;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      .otp-button {
+        outline: none;
+        text-align: center;
+
+        margin: 0;
+        width: 64px;
+        height: 64px;
+        background: rgba(250, 116, 54, 0.1);
+        border: 2px solid rgba(250, 116, 54, 0.5);
+        border-radius: 10px;
+        @media screen and (max-width: 1536px) {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+    div {
+      button {
+        @media screen and (max-width: 1536px) {
+          width: 400px;
+          height: 3.5rem;
+        }
+        margin-top: 2rem;
+        width: 453px;
+        height: 64px;
+        background: $color-background-1;
+        border-radius: 10px;
+        span {
+          @media screen and (max-width: 1536px) {
+            @include text($fs-body-3, $fw-7, $color-background-3, $lh-2);
+          }
+          @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
+        }
+      }
+      .check {
+        text-decoration: none;
+        @media screen and (max-width: 1536px) {
+          @include text($fs-text-min, $fw-7, $color-primary-main-1, $lh-2);
+        }
+        @include text($fs-text-1, $fw-7, $color-primary-main-1, $lh-2);
+      }
+    }
+  }
+}

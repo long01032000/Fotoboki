@@ -48,7 +48,7 @@ export default function RegisterForm({}: Props) {
               rules={[
                 { required: true, message: "Please input your Password!" },
               ]}
-              hasFeedback
+              
             >
               <Input.Password
                 prefix={<img src="Image/shieldSlash.svg" alt="Password"></img>}
@@ -59,7 +59,7 @@ export default function RegisterForm({}: Props) {
             <Form.Item
               name="confirm"
               dependencies={["password"]}
-              hasFeedback
+              
               rules={[
                 {
                   required: true,
@@ -103,7 +103,7 @@ export default function RegisterForm({}: Props) {
               >
                 Register
               </Button>
-              <div className="register text-center mt-3">
+              <div className="register-text text-center">
                 You have account? <NavLink to="/login">Login now</NavLink>
               </div>
             </Form.Item>

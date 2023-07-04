@@ -1,5 +1,10 @@
 @import "./base/base";
 @import "./themes/_variable.scss";
 @import "./pages/Login/Login.scss";
+@import "./pages//Register//Register.scss";
+@import "./pages//ForgotPassword//ForgotPassword.scss";
+@import "./pages//OTP//OTP.scss";
 @import "./component//LoginForm//LoginForm.scss";
 @import "./component//RegisterForm//RegisterForm.scss";
+@import "./component//ForgotPasswordForm//ForgotPasswordForm.scss";
+@import "./component/OtpForm/OtpForm.scss";
