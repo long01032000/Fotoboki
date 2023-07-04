@@ -631,155 +631,309 @@
 // }
 
 // Screen 768px (Ipad)
-// @media screen and (min-width: 768px) {
-//   .left-side {
-//     .login-item-1 {
-//       padding: 0 2rem;
-//       margin-top: 12.813rem;
-//       .title {
-//         h1 {
-//           @include text($fs-title-3, $fw-7, $color-text-1, $lh-5);
-//         }
-//         span {
-//           @include text($fs-text-4, $fw-4, $color-text-4, $lh-5);
-//         }
-//       }
-//       .button {
-//         .ant-space {
-//           .ant-space-item {
-//             button {
-//               width: 18rem;
-//               height: 6rem;
-//               img {
-//                 width: 4rem;
-//                 height: 4rem;
-//                 margin-bottom: 0.5rem;
-//               }
-//               .google-text {
-//                 margin-top: 0.2rem;
-//                 @include text($fs-text-4, $fw-5, $color-text-1, $lh-6);
-//               }
-//               .facebook-text {
-//                 margin-top: 0.2rem;
-//                 @include text($fs-text-4, $fw-5, $color-text-1, $lh-6);
-//               }
-//             }
-//           }
-//         }
-//       }
-//       .nav-text {
-//         h2 {
-//           width: 37.75rem;
-//           margin: 1.5rem 0 2rem;
-//           border-bottom: 1px solid $color-text-4;
-//           span {
-//             @include text($fs-text-2, $fw-5, $color-text-4);
-//           }
-//         }
-//       }
-//       .login-form {
-//         .ant-form {
-//           .ant-form-item {
-//             .ant-row {
-//               .ant-col {
-//                 .ant-form-item-control-input {
-//                   .ant-form-item-control-input-content {
-//                     button {
-//                       width: 37.75rem;
-//                       height: 6rem;
+@media (min-width: 481px) and (max-width: 768px) {
+  .left-side {
+    .login-item-1 {
+      
+      .title {
+        h1 {
+          @include text($fs-title-3, $fw-7, $color-text-1, $lh-5);
+        }
+        span {
+          @include text($fs-text-4, $fw-4, $color-text-4, $lh-5);
+        }
+      }
+      .button {
+        .ant-space {
+          .ant-space-item {
+            button {
+              width: 18rem;
+              height: 6rem;
+              img {
+                width: 4rem;
+                height: 4rem;
+              padding-bottom: 0.5rem;
+              }
+              .google-text {
+                
+                @include text($fs-text-4, $fw-5, $color-text-1, $lh-6);
+              }
+              .facebook-text {
+              
+                @include text($fs-text-4, $fw-5, $color-text-1, $lh-6);
+              }
+            }
+          }
+        }
+      }
+      .nav-text {
+        h2 {
+          width: 37.75rem;
+          margin: 1.5rem 0 2rem;
+          border-bottom: 1px solid $color-text-4;
+          span {
+            @include text($fs-text-2, $fw-5, $color-text-4);
+          }
+        }
+      }
+      .login-form {
+        .ant-form {
+          .ant-form-item {
+            .ant-row {
+              .ant-col {
+                .ant-form-item-control-input {
+                  .ant-form-item-control-input-content {
+                    button {
+                      width: 37.75rem;
+                      height: 6rem;
 
-//                       span {
-//                         @include text(
-//                           $fs-text-4,
-//                           $fw-7,
-//                           $color-background-3,
-//                           $lh-2
-//                         );
-//                       }
-//                     }
-//                     .register {
-//                       @include text($fs-text-2, $fw-4, $color-text-4, $lh-5);
+                      span {
+                        @include text(
+                          $fs-text-4,
+                          $fw-7,
+                          $color-background-3,
+                          $lh-2
+                        );
+                      }
+                    }
+                    .register {
+                      @include text($fs-text-2, $fw-4, $color-text-4, $lh-5);
 
-//                       a {
-//                         @include text(
-//                           $fs-text-2,
-//                           $fw-7,
-//                           $color-primary-main-1,
-//                           $lh-5
-//                         );
-//                       }
-//                     }
+                      a {
+                        @include text(
+                          $fs-text-2,
+                          $fw-7,
+                          $color-primary-main-1,
+                          $lh-5
+                        );
+                      }
+                    }
 
-//                     .ant-input-affix-wrapper {
-//                       width: 37.75rem;
-//                       height: 6rem;
+                    .ant-input-affix-wrapper {
+                      width: 37.75rem;
+                      height: 6rem;
 
-//                       .ant-input-prefix {
-//                         img {
-//                           width: 3rem;
-//                           height: 3rem;
-//                         }
-//                       }
-//                       ::placeholder {
-//                         @include text($fs-text-2, $fw-4, $color-button-solid-1);
-//                       }
-//                       .ant-input-suffix {
-//                         span {
-//                           svg {
-//                             width: 2rem;
-//                             height: 2rem;
-//                           }
-//                         }
-//                       }
-//                       input {
-//                         @include text($fs-text-2, $fw-5, $color-text-4);
-//                       }
-//                     }
-//                     .ant-checkbox-wrapper {
-//                       padding-right: 12rem;
-//                       .ant-checkbox {
-//                         .ant-checkbox-input {
-//                         }
-//                         .ant-checkbox-inner {
-//                           width: 1.2rem;
-//                           height: 1.2rem;
-//                         }
-//                       }
-//                       span {
-//                         @include text($fs-text-2, $fw-4, $color-text-4, $lh-2);
-//                       }
-//                       .ant-checkbox-checked {
-//                         .ant-checkbox-inner {
-//                         }
-//                       }
-//                       .ant-checkbox-checked:after {
-//                       }
-//                     }
-//                     .login-form-forgot {
-//                       @include text(
-//                         $fs-text-2,
-//                         $fw-6,
-//                         $color-primary-main-1,
-//                         $lh-2
-//                       );
-//                     }
-//                   }
-//                 }
-//                 div {
-//                   .ant-form-item-explain {
-//                     .ant-form-item-explain-error {
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+                      .ant-input-prefix {
+                        img {
+                          width: 3rem;
+                          height: 3rem;
+                        }
+                      }
+                      ::placeholder {
+                        @include text($fs-text-2, $fw-4, $color-button-solid-1);
+                      }
+                      .ant-input-suffix {
+                        margin-inline-start: 0px;
+                        span {
+                          svg {
+                            width: 2rem;
+                            height: 2rem;
+                          }
+                        }
+                      }
+                      input {
+                        width: 463px;
+                        @include text($fs-text-2, $fw-5, $color-text-4);
+                      }
+                    }
+                    .ant-checkbox-wrapper {
+                      padding-right: 12rem;
+                      .ant-checkbox {
+                        .ant-checkbox-input {
+                        }
+                        .ant-checkbox-inner {
+                          width: 1.2rem;
+                          height: 1.2rem;
+                        }
+                      }
+                      span {
+                        @include text($fs-text-2, $fw-4, $color-text-4, $lh-2);
+                      }
+                      .ant-checkbox-checked {
+                        .ant-checkbox-inner {
+                        }
+                      }
+                      .ant-checkbox-checked:after {
+                      }
+                    }
+                    .login-form-forgot {
+                      @include text(
+                        $fs-text-2,
+                        $fw-6,
+                        $color-primary-main-1,
+                        $lh-2
+                      );
+                    }
+                  }
+                }
+                div {
+                  .ant-form-item-explain {
+                    .ant-form-item-explain-error {
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+@media (min-width: 320px) and (max-width: 414px){
+  .left-side {
+        .login-item-1 {
+         padding-top: 1rem;
+          .title {
+            width: 335px;
+            padding-left: 0.5rem;
+            h1 {
+              @include text($fs-text-6, $fw-7, $color-text-1, $lh-1);
+            }
+            span {
+              @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+            }
+          }
+          .button {
+            .ant-space {
+              gap: 2rem!important;
+              .ant-space-item {
+                button {
+                  width: 9rem;
+                  height: 3rem;
+                  padding: 4px 4px;
+                  img {                   
+                    width: 2rem;
+                    height: 2rem;
+                  }
+                  .google-text {
+                    padding: 0.7rem 0.7rem;
+                    @include text($fs-body-2, $fw-5, $color-text-1, $lh-1);
+                  }
+                  .facebook-text {
+                    padding: 0.7rem 0.4rem;
+                    @include text($fs-body-2, $fw-5, $color-text-1, $lh-1);
+                  }
+                }
+              }
+            }
+          }
+          .nav-text {
+            h2 {
+              width: 19.6rem;
+              margin: 0.8rem 0;
+              border-bottom: 0.1rem solid $color-text-4;
+              span {
+                @include text($fs-text-min, $fw-5, $color-text-4);
+              }
+            }
+          }
+          .login-form {
+            .ant-form {
+              .ant-form-item {
+                .ant-row {
+                  .ant-col {
+                    .ant-form-item-control-input {
+                      .ant-form-item-control-input-content {
+                        button {
+                          width: 18.5rem;
+                          height: 3.5rem;
+    
+                          span {
+                            @include text(
+                              $fs-text-1,
+                              $fw-7,
+                              $color-background-3,
+                              $lh-2
+                            );
+                          }
+                        }
+                        .register {
+                          @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
+    
+                          a {
+                            @include text(
+                              $fs-text-min,
+                              $fw-7,
+                              $color-primary-main-1,
+    
+                            );
+                          }
+                        }
+    
+                        .ant-input-affix-wrapper {
+                          width: 18.5rem;
+                          height: 3.5rem;
+    
+                          .ant-input-prefix {
+                            img {
+                              width: 2rem;
+                              height: 2rem;
+                            }
+                          }
+                          ::placeholder {
+                            @include text($fs-text-1, $fw-4, $color-button-solid-1,);
+                          }
+                          .ant-input-suffix {
+                            margin-inline-start: -4px;
+                            span {
+                              svg {
+                                width: 1rem;
+                                height: 1rem;
+                              }
+                            }
+                          }
+                          input {
+                            width: 200px;
+                            @include text($fs-text-1, $fw-5, $color-text-4);
+                          }
+                        }
+                        .ant-checkbox-wrapper {
+                          padding-right: 3.8rem;
+                          .ant-checkbox {
+                            .ant-checkbox-input {
+                            }
+                            .ant-checkbox-inner {
+                              width: 1.2rem;
+                              height: 1.2rem;
+                            }
+                          }
+                          span {
+                            @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
+                          }
+                          .ant-checkbox-checked {
+                            .ant-checkbox-inner {
+                            }
+                          }
+                          .ant-checkbox-checked:after {
+                          }
+                        }
+                        .login-form-forgot {
+                          @include text(
+                            $fs-text-min,
+                            $fw-6,
+                            $color-primary-main-1,
+                            $lh-2
+                          );
+                        }
+                      }
+                    }
+                    div {
+                      .ant-form-item-explain {
+                        .ant-form-item-explain-error {
+                          padding: 0 22px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+}
 //Screen 390px (Iphone)
 // @media screen and (max-width: 414px) {
 //   .left-side {
