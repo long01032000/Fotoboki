@@ -89,7 +89,7 @@ export default function LoginForm({}: Props) {
             >
               LOG IN
             </Button>
-            <div className="register text-center mt-3">
+            <div className="register text-center">
               Don’t have account? <NavLink to="/register">Create an account</NavLink>
             </div>
           </Form.Item>

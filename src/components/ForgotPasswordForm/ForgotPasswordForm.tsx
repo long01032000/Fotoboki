@@ -45,7 +45,7 @@ export default function ForgotPasswordForm({}: Props) {
             >
               GET PASSWORD
             </Button>
-            <div className="check text-center mt-3">
+            <div className="check text-center">
             Check your <span className="login-now">Email</span> and <NavLink to="/login">Login now </NavLink>
             </div>
           </Form.Item>

@@ -63,11 +63,11 @@ export default function OtpForm({}: Props) {
             );
           })}
         </div>
-        <div>
+        <div className="submit-button">
           <Button htmlType="submit" className="submit-button">
             SUBMIT
           </Button>
-          <div className="check text-center mt-3">Resent OTP</div>
+          <div className="check text-center">Resent OTP</div>
         </div>
       </div>
     </div>
