@@ -70,8 +70,8 @@
                     .ant-input-prefix {
                       margin-inline-end: 0;
                       img {
-                        width: 30px;
-                        height: 30px;
+                        width: 1.563rem;
+                        height: 1.563rem;
                       }
                     }
                     ::placeholder {
@@ -83,8 +83,8 @@
                         color: $color-button-solid-1;
                         svg {
                           /* eye-slash */
-                          width: 1.875rem;
-                          height: 1.875rem;
+                          width: 1.563rem;
+                          height: 1.563rem;
                         }
                       }
                     }
@@ -106,8 +106,8 @@
                     .ant-checkbox {
                       
                       .ant-checkbox-input {
-                        width: 20px;
-                        height: 20px;
+                        width: 16px;
+                        height: 16px;
                         border: 2px solid $color-button-solid-1;
                       }
                       .ant-checkbox-inner {

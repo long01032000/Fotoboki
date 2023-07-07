@@ -5,8 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    @media screen and (max-width: 1024px) {
+    
+    @media screen and (max-width: 1000px) {
       .row {      
+        background-color: $color-background-3;
         .left-side{
           width: 100%;
         }

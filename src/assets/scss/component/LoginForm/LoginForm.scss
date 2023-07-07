@@ -1,4 +1,5 @@
 .left-side {
+  background: $color-background-3;
   width: 50%;
   height: 100vh;
   padding-left: 0 !important;
@@ -22,7 +23,7 @@
         @include text($fs-body-1, $fw-4, $color-text-4, $lh-2);
       }
     }
-    .button {     
+    .button {
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -35,8 +36,9 @@
             width: 13.438rem;
             height: 3.75rem;
             img {
-              padding-bottom: 0.313rem;
-              width: 1.875rem;
+              margin-bottom: 0.33rem;
+              height: 1.75rem;
+              width: 1.75rem;
             }
             .google-text {
               padding: 0.625rem 0.625rem;
@@ -78,13 +80,14 @@
       .ant-form {
         .ant-form-item {
           // padding-bottom: 10px;
-        
+
           @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
           .ant-row {
             .ant-col {
               .ant-form-item-control-input {
                 flex-direction: column;
                 .ant-form-item-control-input-content {
+                  padding: 0 12px;
                   button {
                     width: 28.313rem;
                     height: 4rem;
@@ -108,7 +111,7 @@
                       @include text($fs-text-1, $fw-7, $color-primary-main-1);
                     }
                   }
-                  padding: 0 12px;
+
                   .ant-input-affix-wrapper {
                     align-items: center;
                     gap: 10px;
@@ -122,8 +125,8 @@
                     .ant-input-prefix {
                       margin-inline-end: 0;
                       img {
-                        width: 30px;
-                        height: 30px;
+                        width: 1.563rem;
+                        height: 1.563rem;
                       }
                     }
                     ::placeholder {
@@ -135,8 +138,8 @@
                         color: $color-button-solid-1;
                         svg {
                           /* eye-slash */
-                          width: 1.875rem;
-                          height: 1.875rem;
+                          width: 1.563rem;
+                          height: 1.563rem;
                         }
                       }
                     }
@@ -156,10 +159,9 @@
                   .ant-checkbox-wrapper {
                     padding-right: 9.7rem;
                     .ant-checkbox {
-                     
                       .ant-checkbox-input {
-                        width: 20px;
-                        height: 20px;
+                        width: 16px;
+                        height: 16px;
                         border: 2px solid $color-button-solid-1;
                       }
                       .ant-checkbox-inner {
@@ -167,7 +169,6 @@
                       }
                     }
                     span {
-                     
                       @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
                     }
                     .ant-checkbox-checked {
@@ -195,7 +196,6 @@
                 .ant-form-item-explain {
                   .ant-form-item-explain-error {
                     padding: 0 15px;
-                   
                   }
                 }
               }
@@ -208,579 +208,12 @@
 }
 
 //------------------------------------------Responsive----------------------------------//
-
-@media (min-width: 1400px) and (max-width: 1536px) {
+@media screen and (min-width: 375px) {
   .left-side {
+    overflow-y: clip;
     .login-item-1 {
-      .title {
-                h1 {
-          @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
-                }
-                span {
-          @include text($fs-body-1, $fw-4, $color-text-4, $lh-3);
-                }
-              }
-      .button {
-        
-        .ant-space {
-          .ant-space-item {
-            button {
-              img {
-              }
-              .google-text {
-                @include text($fs-body-2, $fw-5, $color-text-1, $lh-2);
-              }
-              .facebook-text {
-                @include text($fs-body-2, $fw-5, $color-text-1, $lh-2);
-              }
-            }
-          }
-        }
-      }
-      .nav-text {
-        h2 {
-          width: 28.313rem;
-          margin: 0 0 15px;
-
-          span {
-            @include text($fs-text-min, $fw-5, $color-text-4);
-          }
-        }
-      }
-      .login-form {
-        .ant-form {
-          .ant-form-item {
-            .ant-row {
-              .ant-col {
-                .ant-form-item-control-input {
-                  .ant-form-item-control-input-content {
-                    button {
-                      width: 28.313rem;
-                      height: 4rem;
-
-                      span {
-                        
-                      }
-                    }
-                    .register {
-                      @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
-
-                      a {
-                        @include text(
-                          $fs-text-1,
-                          $fw-7,
-                          $color-primary-main-1
-                        );
-                      }
-                    }
-
-                    .ant-input-affix-wrapper {
-                      width: 28.313rem;
-                      height: 4rem;
-
-                      .ant-input-prefix {
-                        img {
-                        }
-                      }
-                      ::placeholder {
-                        @include text($fs-body-2, $fw-4, $color-button-solid-1);
-                      }
-                      .ant-input-suffix {
-                        span {
-                          svg {
-                          }
-                        }
-                      }
-                      input {
-                        background: none;
-                        cursor: inherit;
-                        box-shadow: inset 0 0 0 1px transparent,
-                          inset 0 0 0 100px transparent;
-                      }
-                    }
-                    .ant-checkbox-wrapper {
-                      padding-right: 10.3rem;
-                      .ant-checkbox {
-                        .ant-checkbox-input {
-                        }
-                        .ant-checkbox-inner {
-                        }
-                      }
-                      span {
-                        
-                      }
-                      .ant-checkbox-checked {
-                        .ant-checkbox-inner {
-                        }
-                      }
-                      .ant-checkbox-checked:after {
-                      }
-                    }
-                    .login-form-forgot {
-                      @include text(
-                        $fs-text-1,
-                        $fw-6,
-                        $color-primary-main-1,
-                        $lh-2
-                      );
-                    }
-                  }
-                }
-                div {
-                  .ant-form-item-explain {
-                    .ant-form-item-explain-error {
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-
-
-
-//Screen 1536px
-// @media screen and (min-width: 1537px) {
-//   .left-side {
-//     .login-item-1 {
-//       padding: 4rem 11rem;
-//       margin-top: 2.813rem;
-//       .title {
-//         h1 {
-//           @include text($fs-text-5, $fw-7, $color-text-1, $lh-2);
-//         }
-//         span {
-//           @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
-//         }
-//       }
-//       .button {
-//         margin-top: 1rem;
-//         .ant-space {
-//           .ant-space-item {
-//             button {
-//               width: 11.2rem;
-//               height: 3.5rem;
-//               img {
-//               }
-//               .google-text {
-//                 @include text($fs-body-2, $fw-5, $color-text-1, $lh-2);
-//               }
-//               .facebook-text {
-//                 @include text($fs-body-2, $fw-5, $color-text-1, $lh-2);
-//               }
-//             }
-//           }
-//         }
-//       }
-//       .nav-text {
-//         padding: 10px 0;
-//         h2 {
-//           width: 400px;
-//           margin: 10px 0 15px;
-
-//           span {
-//             @include text($fs-text-min, $fw-5, $color-text-4);
-//           }
-//         }
-//       }
-//       .login-form {
-//         .ant-form {
-//           .ant-form-item {
-//             .ant-row {
-//               .ant-col {
-//                 .ant-form-item-control-input {
-//                   .ant-form-item-control-input-content {
-//                     button {
-//                       width: 400px;
-//                       height: 3.5rem;
-
-//                       span {
-//                         @include text(
-//                           $fs-body-3,
-//                           $fw-7,
-//                           $color-background-3,
-//                           $lh-2
-//                         );
-//                       }
-//                     }
-//                     .register {
-//                       @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
-
-//                       a {
-//                         @include text(
-//                           $fs-text-min,
-//                           $fw-7,
-//                           $color-primary-main-1
-//                         );
-//                       }
-//                     }
-
-//                     .ant-input-affix-wrapper {
-//                       width: 25rem;
-//                       height: 3.5rem;
-
-//                       .ant-input-prefix {
-//                         img {
-//                         }
-//                       }
-//                       // ::placeholder {
-//                       //   @include text($fs-text-1,$fw-4, $color-button-solid-1,);
-//                       // }
-//                       .ant-input-suffix {
-//                         span {
-//                           svg {
-//                           }
-//                         }
-//                       }
-//                     }
-//                     .ant-checkbox-wrapper {
-//                       padding-right: 10.3rem;
-//                       .ant-checkbox {
-//                         .ant-checkbox-input {
-//                         }
-//                         .ant-checkbox-inner {
-//                         }
-//                       }
-//                       span {
-//                         @include text(
-//                           $fs-text-min,
-//                           $fw-4,
-//                           $color-text-4,
-//                           $lh-2
-//                         );
-//                       }
-//                       .ant-checkbox-checked {
-//                         .ant-checkbox-inner {
-//                         }
-//                       }
-//                       .ant-checkbox-checked:after {
-//                       }
-//                     }
-//                     .login-form-forgot {
-//                       @include text(
-//                         $fs-text-min,
-//                         $fw-6,
-//                         $color-primary-main-1,
-//                         $lh-2
-//                       );
-//                     }
-//                   }
-//                 }
-//                 div {
-//                   .ant-form-item-explain {
-//                     .ant-form-item-explain-error {
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-//screen 1440px (Macbook)
-// @media screen and (min-width: 1200px) {
-//   .left-side {
-//     .login-item-1 {
-//       padding: 4rem 11rem;
-//       margin-top: 8.813rem;
-//       .title {
-//         h1 {
-//           @include text($fs-text-4, $fw-7, $color-text-1);
-//         }
-//         span {
-//           @include text($fs-text-1, $fw-4, $color-text-4, $lh-3);
-//         }
-//       }
-//       .button {
-//         .ant-space {
-//           .ant-space-item {
-//             button {
-//               width: 10.2rem;
-//               height: 3.5rem;
-//               img {
-//               }
-//               .google-text {
-//                 @include text($fs-body-3, $fw-5, $color-text-1, $lh-2);
-//               }
-//               .facebook-text {
-//                 @include text($fs-body-3, $fw-5, $color-text-1, $lh-2);
-//               }
-//             }
-//           }
-//         }
-//       }
-//       .nav-text {
-//         h2 {
-//           width: 22.75rem;
-//           margin: 10px 0 10px;
-//           span {
-//             @include text($fs-text-min, $fw-5, $color-text-4);
-//           }
-//         }
-//       }
-//       .login-form {
-//         .ant-form {
-//           .ant-form-item {
-//             .ant-row {
-//               .ant-col {
-//                 .ant-form-item-control-input {
-//                   .ant-form-item-control-input-content {
-//                     button {
-//                       width: 22.75rem;
-//                       height: 3.5rem;
-
-//                       span {
-//                         @include text(
-//                           $fs-body-3,
-//                           $fw-7,
-//                           $color-background-3,
-//                           $lh-2
-//                         );
-//                       }
-//                     }
-//                     .register {
-//                       @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
-
-//                       a {
-//                         @include text(
-//                           $fs-text-min,
-//                           $fw-7,
-//                           $color-primary-main-1
-//                         );
-//                       }
-//                     }
-
-//                     .ant-input-affix-wrapper {
-//                       width: 22.75rem;
-//                       height: 3.5rem;
-
-//                       .ant-input-prefix {
-//                         img {
-//                         }
-//                       }
-//                       // ::placeholder {
-//                       //   @include text($fs-text-1,$fw-4, $color-button-solid-1,);
-//                       // }
-//                       .ant-input-suffix {
-//                         span {
-//                           svg {
-//                           }
-//                         }
-//                       }
-//                     }
-//                     .ant-checkbox-wrapper {
-//                       padding-right: 8rem;
-//                       .ant-checkbox {
-//                         .ant-checkbox-input {
-//                         }
-//                         .ant-checkbox-inner {
-//                         }
-//                       }
-//                       span {
-//                         @include text(
-//                           $fs-text-min,
-//                           $fw-4,
-//                           $color-text-4,
-//                           $lh-2
-//                         );
-//                       }
-//                       .ant-checkbox-checked {
-//                         .ant-checkbox-inner {
-//                         }
-//                       }
-//                       .ant-checkbox-checked:after {
-//                       }
-//                     }
-//                     .login-form-forgot {
-//                       @include text(
-//                         $fs-text-min,
-//                         $fw-6,
-//                         $color-primary-main-1,
-//                         $lh-2
-//                       );
-//                     }
-//                   }
-//                 }
-//                 div {
-//                   .ant-form-item-explain {
-//                     .ant-form-item-explain-error {
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-//icon 25px ; remember me 16px ; icon fb gmail 28px
-
-// Screen 768px (Ipad)
-@media (min-width: 481px) and (max-width: 1000px) {
-  .left-side {
-    .login-item-1 {
-      overflow: auto;
-      padding-top: 1.5rem;
-      .title {
-        width: 600px;
-        h1 {
-          @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
-        }
-        span {
-          @include text($fs-body-1, $fw-4, $color-text-4, $lh-2);
-        }
-      }
-      .button {
-        .ant-space {
-          .ant-space-item {
-            button {
-              width: 18rem;
-              height: 6rem;
-              img {
-                width: 4rem;
-                height: 4rem;
-                padding-bottom: 0.5rem;
-              }
-              .google-text {
-                @include text($fs-text-4, $fw-5, $color-text-1, $lh-6);
-              }
-              .facebook-text {
-                @include text($fs-text-4, $fw-5, $color-text-1, $lh-6);
-              }
-            }
-          }
-        }
-      }
-      .nav-text {
-        h2 {
-          width: 37.75rem;
-          margin: 1.5rem 0 2rem;
-          border-bottom: 1px solid $color-text-4;
-          span {
-            @include text($fs-text-2, $fw-5, $color-text-4);
-          }
-        }
-      }
-      .login-form {
-        .ant-form {
-          .ant-form-item {
-            .ant-row {
-              .ant-col {
-                .ant-form-item-control-input {
-                  .ant-form-item-control-input-content {
-                    button {
-                      width: 37.75rem;
-                      height: 6rem;
-
-                      span {
-                        @include text(
-                          $fs-text-4,
-                          $fw-7,
-                          $color-background-3,
-                          $lh-2
-                        );
-                      }
-                    }
-                    .register {
-                      @include text($fs-text-2, $fw-4, $color-text-4, $lh-5);
-
-                      a {
-                        @include text(
-                          $fs-text-2,
-                          $fw-7,
-                          $color-primary-main-1,
-                          $lh-5
-                        );
-                      }
-                    }
-
-                    .ant-input-affix-wrapper {
-                      width: 37.75rem;
-                      height: 6rem;
-
-                      .ant-input-prefix {
-                        img {
-                          width: 3rem;
-                          height: 3rem;
-                        }
-                      }
-                      ::placeholder {
-                        @include text($fs-text-2, $fw-4, $color-button-solid-1);
-                      }
-                      .ant-input-suffix {
-                        margin-inline-start: 0px;
-                        span {
-                          svg {
-                            width: 2rem;
-                            height: 2rem;
-                          }
-                        }
-                      }
-                      input {
-                        width: 463px;
-                        @include text($fs-text-2, $fw-5, $color-text-4);
-                      }
-                    }
-                    .ant-checkbox-wrapper {
-                      padding-right: 12rem;
-                      .ant-checkbox {
-                        .ant-checkbox-input {
-                        }
-                        .ant-checkbox-inner {
-                          width: 1.2rem;
-                          height: 1.2rem;
-                        }
-                      }
-                      span {
-                        @include text($fs-text-2, $fw-4, $color-text-4, $lh-2);
-                      }
-                      .ant-checkbox-checked {
-                        .ant-checkbox-inner {
-                        }
-                      }
-                      .ant-checkbox-checked:after {
-                      }
-                    }
-                    .login-form-forgot {
-                      @include text(
-                        $fs-text-2,
-                        $fw-6,
-                        $color-primary-main-1,
-                        $lh-2
-                      );
-                    }
-                  }
-                }
-                div {
-                  .ant-form-item-explain {
-                    .ant-form-item-explain-error {
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 320px) and (max-width: 414px) {
-  .left-side {
-    .login-item-1 {
-      padding-top: 1rem;
+      overflow-y: clip;
+      // padding-top: 1rem;
       .title {
         width: 335px;
         padding-left: 0.5rem;
@@ -792,6 +225,7 @@
         }
       }
       .button {
+        padding: 0 0 1rem 0;
         .ant-space {
           gap: 2rem !important;
           .ant-space-item {
@@ -817,7 +251,7 @@
       }
       .nav-text {
         h2 {
-          width: 19.6rem;
+          width: 18.5rem;
           margin: 0.8rem 0;
           border-bottom: 0.1rem solid $color-text-4;
           span {
@@ -934,157 +368,354 @@
     }
   }
 }
-//Screen 390px (Iphone)
-// @media screen and (max-width: 414px) {
-//   .left-side {
-//     .login-item-1 {
-//       padding: 0 2rem!important;
-//       margin-top: 3rem;
-//       .title {
-//         h1 {
-//           @include text($fs-text-6, $fw-7, $color-text-1, $lh-1);
-//         }
-//         span {
-//           @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
-//         }
-//       }
-//       .button {
-//         .ant-space {
-//           .ant-space-item {
-//             button {
-//               width: 8.8rem;
-//               height: 3rem;
-//               padding: 4px 4px;
-//               img {
-//                 margin-top: 0.3rem;
-//                 margin-right: 0.3rem;
-//                 width: 2rem;
-//                 height: 2rem;
-//               }
-//               .google-text {
-//                 padding: 0;
-//                 margin-top: 0;
-//                 @include text($fs-body-2, $fw-5, $color-text-1, $lh-1);
-//               }
-//               .facebook-text {
 
-//                 margin-top: 0;
-//                 padding: 0;
-//                 @include text($fs-body-2, $fw-5, $color-text-1, $lh-1);
-//               }
-//             }
-//           }
-//         }
-//       }
-//       .nav-text {
-//         h2 {
-//           width: 20rem;
-//           margin: 0.8rem 0;
-//           border-bottom: 0.1rem solid $color-text-4;
-//           span {
-//             @include text($fs-text-min, $fw-5, $color-text-4);
-//           }
-//         }
-//       }
-//       .login-form {
-//         .ant-form {
-//           .ant-form-item {
-//             .ant-row {
-//               .ant-col {
-//                 .ant-form-item-control-input {
-//                   .ant-form-item-control-input-content {
-//                     button {
-//                       width: 20rem;
-//                       height: 4rem;
+@media screen and (min-width: 768px) {
+  .left-side {
+    .login-item-1 {
+      padding-top: 1.5rem;
+      .title {
+        width: 335px;
+        padding-left: 0.5rem;
+        h1 {
+          @include text($fs-text-6, $fw-7, $color-text-1, $lh-1);
+        }
+        span {
+          @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+        }
+      }
+      .button {
+        .ant-space {
+          gap: 2rem !important;
+          .ant-space-item {
+            button {
+              width: 9rem;
+              height: 3rem;
+              padding: 4px 4px;
+              img {
+                width: 2rem;
+                height: 2rem;
+              }
+              .google-text {
+                padding: 0.7rem 0.7rem;
+                @include text($fs-body-2, $fw-5, $color-text-1, $lh-1);
+              }
+              .facebook-text {
+                padding: 0.7rem 0.4rem;
+                @include text($fs-body-2, $fw-5, $color-text-1, $lh-1);
+              }
+            }
+          }
+        }
+      }
+      .nav-text {
+        h2 {
+          width: 18.5rem;
+          margin: 0.8rem 0;
+          border-bottom: 0.1rem solid $color-text-4;
+          span {
+            @include text($fs-text-min, $fw-5, $color-text-4);
+          }
+        }
+      }
+      .login-form {
+        .ant-form {
+          .ant-form-item {
+            .ant-row {
+              .ant-col {
+                .ant-form-item-control-input {
+                  .ant-form-item-control-input-content {
+                    button {
+                      width: 18.5rem;
+                      height: 3.5rem;
 
-//                       span {
-//                         @include text(
-//                           $fs-text-1,
-//                           $fw-7,
-//                           $color-background-3,
-//                           $lh-2
-//                         );
-//                       }
-//                     }
-//                     .register {
-//                       @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
+                      span {
+                        @include text(
+                          $fs-text-1,
+                          $fw-7,
+                          $color-background-3,
+                          $lh-2
+                        );
+                      }
+                    }
+                    .register {
+                      @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
 
-//                       a {
-//                         @include text(
-//                           $fs-text-min,
-//                           $fw-7,
-//                           $color-primary-main-1,
+                      a {
+                        @include text(
+                          $fs-text-min,
+                          $fw-7,
+                          $color-primary-main-1
+                        );
+                      }
+                    }
 
-//                         );
-//                       }
-//                     }
+                    .ant-input-affix-wrapper {
+                      width: 18.5rem;
+                      height: 3.5rem;
 
-//                     .ant-input-affix-wrapper {
-//                       width: 20rem;
-//                       height: 4rem;
+                      .ant-input-prefix {
+                        img {
+                          width: 2rem;
+                          height: 2rem;
+                        }
+                      }
+                      ::placeholder {
+                        @include text($fs-text-1, $fw-4, $color-button-solid-1);
+                      }
+                      .ant-input-suffix {
+                        margin-inline-start: 0;
+                        span {
+                          svg {
+                            width: 1rem;
+                            height: 1rem;
+                          }
+                        }
+                      }
+                      input {
+                        width: 200px;
+                        @include text($fs-text-1, $fw-5, $color-text-4);
+                      }
+                    }
+                    .ant-checkbox-wrapper {
+                      padding-right: 3.8rem;
+                      .ant-checkbox {
+                        .ant-checkbox-input {
+                        }
+                        .ant-checkbox-inner {
+                          width: 1.2rem;
+                          height: 1.2rem;
+                        }
+                      }
+                      span {
+                        @include text(
+                          $fs-text-min,
+                          $fw-4,
+                          $color-text-4,
+                          $lh-2
+                        );
+                      }
+                      .ant-checkbox-checked {
+                        .ant-checkbox-inner {
+                        }
+                      }
+                      .ant-checkbox-checked:after {
+                      }
+                    }
+                    .login-form-forgot {
+                      @include text(
+                        $fs-text-min,
+                        $fw-6,
+                        $color-primary-main-1,
+                        $lh-2
+                      );
+                    }
+                  }
+                }
+                div {
+                  .ant-form-item-explain {
+                    .ant-form-item-explain-error {
+                      padding: 0 22px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
-//                       .ant-input-prefix {
-//                         img {
-//                           width: 2.2rem;
-//                           height: 2.2rem;
-//                         }
-//                       }
-//                       ::placeholder {
-//                         @include text($fs-text-1, $fw-4, $color-button-solid-1,);
-//                       }
-//                       .ant-input-suffix {
-//                         span {
-//                           svg {
-//                             width: 1rem;
-//                             height: 1rem;
-//                           }
-//                         }
-//                       }
-//                       input {
-//                         @include text($fs-text-1, $fw-5, $color-text-4);
-//                       }
-//                     }
-//                     .ant-checkbox-wrapper {
-//                       padding-right: 5rem;
-//                       .ant-checkbox {
-//                         .ant-checkbox-input {
-//                         }
-//                         .ant-checkbox-inner {
-//                           width: 1.2rem;
-//                           height: 1.2rem;
-//                         }
-//                       }
-//                       span {
-//                         @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
-//                       }
-//                       .ant-checkbox-checked {
-//                         .ant-checkbox-inner {
-//                         }
-//                       }
-//                       .ant-checkbox-checked:after {
-//                       }
-//                     }
-//                     .login-form-forgot {
-//                       @include text(
-//                         $fs-text-min,
-//                         $fw-6,
-//                         $color-primary-main-1,
-//                         $lh-2
-//                       );
-//                     }
-//                   }
-//                 }
-//                 div {
-//                   .ant-form-item-explain {
-//                     .ant-form-item-explain-error {
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@media screen and (min-width: 1200px) {
+  .left-side {
+    .login-item-1 {
+      .title {
+        width: 29.813rem;
+        height: 4.25rem;
+        h1 {
+          @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
+        }
+        span {
+          @include text($fs-body-1, $fw-4, $color-text-4, $lh-3);
+        }
+      }
+      .button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1.563rem 0;
+        .ant-space {
+          gap: 2.5rem !important;
+          .ant-space-item {
+            button {
+              border: 2px solid $color-button-solid-1;
+              width: 13.438rem;
+              height: 3.75rem;
+              img {
+                height: 1.75rem;
+                width: 1.75rem;
+              }
+              .google-text {
+                padding: 0.625rem 0.625rem;
+                @include text($fs-text-2, $fw-5, $color-text-1, $lh-2);
+              }
+              .facebook-text {
+                padding: 0.625rem 0.625rem;
+                @include text($fs-text-2, $fw-5, $color-text-1, $lh-2);
+              }
+            }
+          }
+        }
+      }
+      .nav-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.563rem;
+        h2 {
+          width: 28.313rem;
+          text-align: center;
+          border-bottom: 1px solid $color-text-4;
+          line-height: 0.1em;
+          margin: 0 0 15px;
+
+          span {
+            background: $color-background-3;
+            padding: 0 $pd-075;
+            text-align: center;
+            @include text($fs-text-min, $fw-5, $color-text-4);
+          }
+        }
+      }
+      .login-form {
+        padding-top: 0.5rem;
+        .ant-form {
+          .ant-form-item {
+            @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+            .ant-row {
+              .ant-col {
+                .ant-form-item-control-input {
+                  flex-direction: column;
+                  .ant-form-item-control-input-content {
+                    padding: 0 12px;
+                    button {
+                      width: 28.313rem;
+                      height: 4rem;
+                      background: $color-background-1;
+                      border-radius: 10px;
+                      span {
+                        @include text(
+                          $fs-body-1,
+                          $fw-7,
+                          $color-background-3,
+                          $lh-2
+                        );
+                      }
+                    }
+                    .register {
+                      padding-top: 20px;
+                      @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+
+                      a {
+                        @include text($fs-text-1, $fw-7, $color-primary-main-1);
+                      }
+                    }
+
+                    .ant-input-affix-wrapper {
+                      align-items: center;
+                      gap: 10px;
+                      color: $color-button-solid-1;
+                      width: 28.313rem;
+                      height: 4rem;
+                      padding: 10px 0;
+                      background: rgba(250, 116, 54, 0.1);
+                      border: 2px solid $color-button-solid-1;
+                      border-radius: 10px;
+
+                      .ant-input-prefix {
+                        margin-inline-end: 0;
+                        img {
+                          width: 1.563rem;
+                          height: 1.563rem;
+                        }
+                      }
+                      ::placeholder {
+                        @include text($fs-body-2, $fw-4, $color-button-solid-1);
+                      }
+                      .ant-input-suffix {
+                        margin-inline-start: 0;
+                        span {
+                          color: $color-button-solid-1;
+                          svg {
+                            /* eye-slash */
+                            width: 1.563rem;
+                            height: 1.563rem;
+                          }
+                        }
+                      }
+                      input {
+                        width: 22rem;
+                        background: none;
+                        cursor: inherit;
+                        box-shadow: inset 0 0 0 1px transparent,
+                          inset 0 0 0 100px transparent;
+                      }
+                      input:-webkit-autofill,
+                      input:-webkit-autofill:focus {
+                        transition: background-color 600000s 0s,
+                          color 600000s 0s;
+                        font-family: "Poppins", sans-serif;
+                      }
+                    }
+                    .ant-checkbox-wrapper {
+                      padding-right: 9.7rem;
+                      .ant-checkbox {
+                        .ant-checkbox-input {
+                          width: 16px;
+                          height: 16px;
+                          border: 2px solid $color-button-solid-1;
+                        }
+                        .ant-checkbox-inner {
+                          border: 1px solid $color-button-solid-1;
+                        }
+                      }
+                      span {
+                        @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+                      }
+                      .ant-checkbox-checked {
+                        .ant-checkbox-inner {
+                          background-color: $color-background-1;
+                        }
+                      }
+                      .ant-checkbox-checked:after {
+                        border: 2px solid $color-background-1;
+                      }
+                    }
+                    .login-form-forgot {
+                      @include text(
+                        $fs-text-1,
+                        $fw-6,
+                        $color-primary-main-1,
+                        $lh-2
+                      );
+                    }
+                  }
+                }
+                div {
+                  .ant-form-item-explain {
+                    .ant-form-item-explain-error {
+                      padding: 0 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//icon 25px ; remember me 16px ; icon fb gmail 28px
