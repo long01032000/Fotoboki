@@ -1,13 +1,38 @@
-import { Button, Input } from "antd";
+import { Button,Space, Checkbox, Input } from "antd";
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { LeftCircleOutlined } from '@ant-design/icons';
+
+
 
 type Props = {};
 
 let currentOTPIndex: number = 0;
 
 export default function OtpForm({}: Props) {
+  const navigate = useNavigate();
+  const [loadings, setLoadings] = useState<boolean[]>([]);
+
+  const enterLoading = (index: number) => {
+    setLoadings((prevLoadings) => {
+      const newLoadings = [...prevLoadings];
+      newLoadings[index] = true;
+      return newLoadings;
+    });
+
+    setTimeout(() => {
+      setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = false;
+        return newLoadings;
+      });
+      navigate("/home");
+    }, 2000);
+   
+  };
  
+
   const [otp, setOtp] = useState<string[]>(new Array(6).fill(""));
   const [activeOTPIndex, setActiveOTPIndex] = useState<number>(0);
  
@@ -37,6 +62,23 @@ export default function OtpForm({}: Props) {
 
   return (
     <div className="left-side">
+       <div className="backToHome">
+     <Space direction="vertical">
+      <Space wrap>
+        <Button
+          type="primary" 
+          icon={<LeftCircleOutlined />}
+          loading={loadings[2]}
+          onClick={() => {
+            enterLoading(2);
+            
+          }
+        }
+         
+        />
+      </Space>
+    </Space>
+     </div>
       <div className="otp-item-1">
         <div className="title">
           <h1>Enter OTP</h1>

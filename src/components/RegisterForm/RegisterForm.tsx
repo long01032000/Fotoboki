@@ -1,16 +1,55 @@
-import React from "react";
+import React ,{ useState } from "react";
 import { Button, Space, Checkbox, Form, Input } from "antd";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { LeftCircleOutlined } from '@ant-design/icons';
 
 type Props = {};
 
 export default function RegisterForm({}: Props) {
+  const navigate = useNavigate();
+  const [loadings, setLoadings] = useState<boolean[]>([]);
+
+  const enterLoading = (index: number) => {
+    setLoadings((prevLoadings) => {
+      const newLoadings = [...prevLoadings];
+      newLoadings[index] = true;
+      return newLoadings;
+    });
+
+    setTimeout(() => {
+      setLoadings((prevLoadings) => {
+        const newLoadings = [...prevLoadings];
+        newLoadings[index] = false;
+        return newLoadings;
+      });
+      navigate("/home");
+    }, 2000); 
+  };
+
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
   };
 
   return (
     <div className="left-side">
+       <div className="backToHome">
+     <Space direction="vertical">
+      <Space wrap>
+        <Button
+          type="primary" 
+          icon={<LeftCircleOutlined />}
+          loading={loadings[2]}
+          onClick={() => {
+            enterLoading(2);
+            
+          }
+        }
+         
+        />
+      </Space>
+    </Space>
+     </div>
       <div className="register-item-1">
         <div className="title">
           <h1>Create your account</h1>
