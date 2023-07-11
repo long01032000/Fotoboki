@@ -1,17 +1,9 @@
 .left-side {
   width: 50%;
   height: 100vh;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
   .otp-item-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     .title {
       width: 29.813rem;
       height: 4.25rem;
@@ -27,10 +19,11 @@
     }
     .otp-content {
       display: flex;
-      gap: 10px;
-      padding: 1.563rem 0;
-      justify-items: center;
+      gap: 8px;
+      padding: 1.563rem 1rem;
       text-align: center;
+      justify-content: center;
+      font-size: 24px;
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -39,19 +32,17 @@
       .otp-button {
         outline: none;
         text-align: center;
-
-        margin: 0;
         width: 64px;
         height: 64px;
         background: rgba(250, 116, 54, 0.1);
         border: 2px solid rgba(250, 116, 54, 0.5);
         border-radius: 10px;
-        }
       }
+    }
     .submit-button {
       padding-left: 1rem;
       button {
-        width: 28.313rem;
+        width: 29rem;
         height: 4rem;
         background: $color-background-1;
         border-radius: 10px;
@@ -63,6 +54,64 @@
         padding-top: 20px;
         text-decoration: none;
         @include text($fs-text-1, $fw-7, $color-primary-main-1, $lh-2);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 46.1875em) {
+  .left-side {
+    .otp-item-1 {
+      text-align: center;
+      align-items: center;
+      .otp-content {
+        gap: 4px;
+        span {
+          @include text($fw-2);
+        }
+        .otp-button {
+          width: 48px;
+          height: 48px;
+        }
+      }
+      .submit-button {
+        padding-left: 0;
+        button {
+          width: 20.5rem;
+          height: 3.5rem;
+          span {
+            padding-left: 8px;
+          }
+        }
+        .check {
+          padding-top: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .left-side {
+    width: 50%;
+    .otp-item-1 {
+      .title {
+        h1 {
+          font-size: 48px;
+        }
+        span {
+          font-size: 24px;
+        }
+      }
+      .submit-button {
+        button {
+          span {
+            font-size: 24px;
+          }
+        }
+        .check {
+          font-size: 20px;
+        }
       }
     }
   }
