@@ -5,25 +5,34 @@
   flex-direction: column;
   .otp-item-1 {
     .title {
-      width: 29.813rem;
-      height: 4.25rem;
+      max-width: 29.8125rem;
+      width: 29.8125rem;
       h1 {
-        @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
+        font-size: $fs-text-3;
+        font-weight: $fw-7;
+        color: $color-text-1;
+        line-height: $lh-2;
       }
       span {
-        @include text($fs-body-1, $fw-4, $color-text-4, $lh-3);
+        height: 3.0625rem;
+        font-size: $fs-body-1;
+        font-weight: $fw-4;
+        color: $color-text-4;
+        line-height: $lh-3;
       }
       .nav-text {
-        @include text($fs-body-1, $fw-6, $color-primary-main-1, $lh-3);
+        height: 3.0625rem;
+        font-size: $fs-body-1;
+        font-weight: $fw-6;
+        color: $color-primary-main-1;
+        line-height: $lh-3;
       }
     }
     .otp-content {
       display: flex;
-      gap: 8px;
-      padding: 1.563rem 1rem;
-      text-align: center;
+      gap: 0.625rem;
+      padding: 1.5626rem 0rem;
       justify-content: center;
-      font-size: 24px;
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
         -webkit-appearance: none;
@@ -32,85 +41,141 @@
       .otp-button {
         outline: none;
         text-align: center;
-        width: 64px;
-        height: 64px;
-        background: rgba(250, 116, 54, 0.1);
+        font-size: $fs-text-7;
+        font-weight: $fw-4;
+        line-height: $lh-2;
+        max-width: 3.625rem;
+        max-height: 3.625rem;
+        width: 3.625rem;
+        height: 3.625rem;
+        border-radius: 0.625rem;
         border: 2px solid rgba(250, 116, 54, 0.5);
-        border-radius: 10px;
+        background: rgba(250, 116, 54, 0.1);
       }
     }
     .submit-button {
-      padding-left: 1rem;
+      padding: 0rem $pd-075;
       button {
-        width: 29rem;
-        height: 4rem;
-        background: $color-background-1;
-        border-radius: 10px;
+        display: flex;
+        max-width: 28.3125rem;
+        max-height: 3.625rem;
+        width: 28.3125rem;
+        height: 3.625rem;
+        padding: $pd-075;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        background: $color-primary-main-1;
+        border-radius: 0.625rem;
         span {
-          @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
+          font-size: $fs-body-1;
+          font-weight: $fw-7;
+          color: $color-background-3;
+          line-height: $lh-2;
         }
       }
       .check {
-        padding-top: 20px;
+        padding-top: 1.25rem;
+        text-align: center;
         text-decoration: none;
-        @include text($fs-text-1, $fw-7, $color-primary-main-1, $lh-2);
+        font-size: $fs-text-1;
+        font-weight: $fw-7;
+        color: $color-primary-main-1;
+        line-height: $lh-2;
       }
     }
   }
 }
 
-@media only screen and (max-width: 46.1875em) {
+@media only screen and (max-width: 46.1875rem) {
   .left-side {
     .otp-item-1 {
       text-align: center;
-      align-items: center;
-      .otp-content {
-        gap: 4px;
-        span {
-          @include text($fw-2);
+      .title {
+        width: auto;
+        h1 {
+          font-size: $fs-text-4;
         }
+        span {
+          font-size: $fs-body-3;
+        }
+        .nav-text {
+          font-size: $fs-body-3;
+        }
+      }
+      .otp-content {
+        gap: 0.325rem;
+        padding: 1.325rem 0rem;
         .otp-button {
-          width: 48px;
-          height: 48px;
+          font-size: $fs-text-6;
+          width: 2.625rem;
+          height: 2.625rem;
         }
       }
       .submit-button {
-        padding-left: 0;
+        padding: 0;
         button {
-          width: 20.5rem;
-          height: 3.5rem;
+          width: 100%;
+          height: auto;
           span {
-            padding-left: 8px;
+            font-size: $fs-body-3;
           }
-        }
-        .check {
-          padding-top: 16px;
         }
       }
     }
   }
 }
 
-@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+@media only screen and (min-width: 46.25rem) and (max-width: 63.9375rem) {
   .left-side {
-    width: 50%;
     .otp-item-1 {
       .title {
+        width: auto;
+      }
+      .otp-content {
+        padding: 1.525rem $pd-075;
+      }
+      .submit-button {
+        button {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (width: 64rem) {
+  .left-side {
+    .otp-item-1 {
+      .title {
+        width: auto;
         h1 {
-          font-size: 48px;
+          font-size: $fs-text-7;
         }
         span {
-          font-size: 24px;
+          font-size: $fs-body-2;
+        }
+        .nav-text {
+          font-size: $fs-body-2;
+        }
+      }
+      .otp-content {
+        padding: 1.525rem $pd-075;
+        .otp-button {
+          font-size: $fs-text-6;
+          width: 3rem;
+          height: 3rem;
         }
       }
       .submit-button {
         button {
+          width: 100%;
+          height: auto;
           span {
-            font-size: 24px;
+            font-size: $fs-body-2;
           }
-        }
-        .check {
-          font-size: 20px;
         }
       }
     }
