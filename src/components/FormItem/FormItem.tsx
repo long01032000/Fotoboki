@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "antd";
+import { NamePath } from "antd/es/form/interface";
 
 type Props = {
   name: string;
@@ -12,6 +13,7 @@ type Props = {
 type Rule = {
   required?: boolean;
   message?: string;
+  getFieldValue?: (name: NamePath) => any;
 };
 
 export default function FormItem({
@@ -21,7 +23,10 @@ export default function FormItem({
   dependencies,
   required,
 }: Props) {
-  const rules: Rule[] = [{ required: required, message: message }];
+  const rules: Rule[] = [
+    { required: required, message: message },
+    { getFieldValue: (any) => any },
+  ];
   return (
     <Form.Item name={name} rules={rules} dependencies={dependencies}>
       {children}
