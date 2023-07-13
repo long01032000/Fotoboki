@@ -1,4 +1,4 @@
-import OtpForm from "../../components/OtpForm/OtpForm";
+import OtpForm from "../../components/LogicComponent/OtpForm/OtpForm";
 import RightSide from "../../components/UIComponent/sharedUI/RightSide";
 import "./styles.scss";
 export default function OTP() {

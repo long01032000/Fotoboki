@@ -1,4 +1,4 @@
-import ForgotPasswordForm from "../../components/ForgotPasswordForm/ForgotPasswordForm";
+import ForgotPasswordForm from "../../components/LogicComponent/ForgotPasswordForm/ForgotPasswordForm";
 import RightSide from "../../components/UIComponent/sharedUI/RightSide";
 
 export default function ForgotPassword() {

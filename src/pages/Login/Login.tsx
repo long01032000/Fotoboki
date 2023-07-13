@@ -1,4 +1,4 @@
-import LoginForm from "../../components/LoginForm/LoginForm";
+import LoginForm from "../../components/LogicComponent/LoginForm/LoginForm";
 import RightSide from "../../components/UIComponent/sharedUI/RightSide";
 
 export default function Login() {
