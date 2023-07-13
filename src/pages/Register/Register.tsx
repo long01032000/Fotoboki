@@ -1,16 +1,15 @@
 import React from "react";
-import {  Checkbox, Form, Input, Select } from "antd";
+import { Checkbox, Form, Input, Select } from "antd";
 import { NavLink } from "react-router-dom";
 import { CloseCircleOutlined } from "@ant-design/icons";
 import ButtonForm from "../../components/ButtonForm/ButtonForm";
 import FormItem from "../../components/FormItem/FormItem";
 
-
-
 export default function Register() {
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
   };
+
   return (
     <section className="registerPage">
       <div className="row">
@@ -79,22 +78,37 @@ export default function Register() {
                     placeholder="Password"
                   />
                 </FormItem>
-                <FormItem
-                  name="confirm"
-                  dependencies={["password"]} 
-                  rules={[{
-                    required: true,
-                    message : "Please input your confirm Password!"
-                  }]}
+
+                <Form.Item
+                  name="confirmPassword"
+                  required={true}
+                  dependencies={[""]}
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please confirm your password!",
+                    },
+                    ({ getFieldValue }) => ({
+                      validator(_, value) {
+                        if (!value || getFieldValue("password") === value) {
+                          return Promise.resolve();
+                        }
+                        return Promise.reject(
+                          new Error("Passwords do not match!")
+                        );
+                      },
+                    }),
+                  ]}
                 >
                   <Input.Password
                     prefix={
-                      <img src="Image/shieldSlash.svg" alt="Confirm"></img>
+                      <img src="Image/shieldSlash.svg" alt="Password"></img>
                     }
                     type="password"
                     placeholder="Confirm Password"
                   />
-                </FormItem>
+                </Form.Item>
+
                 <Form.Item name="Role">
                   <Select placeholder="Role">
                     <Select.Option value="client">Client</Select.Option>

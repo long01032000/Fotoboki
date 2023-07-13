@@ -23,14 +23,8 @@ export default function FormItem({
 }: Props) {
   const rules: Rule[] = [{ required: required, message: message }];
   return (
-    <Form.Item
-      name={name}
-      rules={rules}
-      dependencies={dependencies}    
-    >
+    <Form.Item name={name} rules={rules} dependencies={dependencies}>
       {children}
     </Form.Item>
   );
 }
-
-
