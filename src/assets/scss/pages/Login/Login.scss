@@ -6,199 +6,162 @@
   overflow-x: hidden;
   
   .row {
+    display: flex;
     padding-left: 0 !important;
     padding-right: 0 !important;
 
-    .right-side {
-      width: 50%;
-      height: 100vh;
-      background-color: $color-background-1;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      .login-item-2 {
-        .ellipse {
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          img {           
-          width: 60%;
-            
-          }
-          .nav-text {  
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            justify-content: center;
-            align-items: center;   
-            h1 {
-              
-              @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
-            }
-            span {   
-                 
-              @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
-            }
-          }
-        }
-        
-      }
-    }
   }
 }
 
 //-----------------------------Responsive----------------------------//
-@media (min-width: 1200px) and (max-width:1400px){
-  .login {
-    .row {
-      .right-side {
-        .login-item-2 {
-          .ellipse {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            img {           
-            width: 90%;
+// @media (min-width: 1200px) and (max-width:1400px){
+//   .login {
+//     .row {
+//       .right-side {
+//         .login-item-2 {
+//           .ellipse {
+//             height: 100vh;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             flex-direction: column;
+//             img {           
+//             width: 90%;
               
-            }
-            .nav-text {  
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              justify-content: center;
-              align-items: center;   
-              h1 {
+//             }
+//             .nav-text {  
+//               width: 100%;
+//               display: flex;
+//               flex-direction: column;
+//               text-align: center;
+//               justify-content: center;
+//               align-items: center;   
+//               h1 {
                 
-                @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
-              }
-              span {   
+//                 @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
+//               }
+//               span {   
                    
-                @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//                 @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-//screen 1440px (Macbook)
-@media (min-width: 1400px) and (max-width: 1536px) {
-  .login {
-    .row {
-      .right-side {
-        .login-item-2 {
-          .ellipse {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            img {           
-            width: 75%;
-            }
-            .nav-text {  
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              justify-content: center;
-              align-items: center;   
-              h1 {
+// //screen 1440px (Macbook)
+// @media (min-width: 1400px) and (max-width: 1536px) {
+//   .login {
+//     .row {
+//       .right-side {
+//         .login-item-2 {
+//           .ellipse {
+//             height: 100vh;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             flex-direction: column;
+//             img {           
+//             width: 75%;
+//             }
+//             .nav-text {  
+//               width: 100%;
+//               display: flex;
+//               flex-direction: column;
+//               text-align: center;
+//               justify-content: center;
+//               align-items: center;   
+//               h1 {
                 
-                @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
-              }
-              span {   
+//                 @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
+//               }
+//               span {   
                    
-                @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//                 @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-@media screen and (min-width: 1600px) {
-  .login {
-    .row {
-      .right-side {
-        .login-item-2 {
-          .ellipse {
-            height: 100vh;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            img {           
-            width: 65%;
-            }
-            .nav-text {  
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              text-align: center;
-              justify-content: center;
-              align-items: center;   
-              h1 {
+// @media screen and (min-width: 1600px) {
+//   .login {
+//     .row {
+//       .right-side {
+//         .login-item-2 {
+//           .ellipse {
+//             height: 100vh;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             flex-direction: column;
+//             img {           
+//             width: 65%;
+//             }
+//             .nav-text {  
+//               width: 100%;
+//               display: flex;
+//               flex-direction: column;
+//               text-align: center;
+//               justify-content: center;
+//               align-items: center;   
+//               h1 {
                 
-                @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
-              }
-              span {   
+//                 @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
+//               }
+//               span {   
                    
-                @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//                 @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-@media (min-width: 481px) and (max-width: 1000px) {
-  .login {
-    overflow-x: scroll;
-    overflow-y: scroll;
+// @media (min-width: 481px) and (max-width: 1000px) {
+//   .login {
+//     overflow-x: scroll;
+//     overflow-y: scroll;
     
-    .row {
+//     .row {
       
   
-      .right-side {
+//       .right-side {
        
-        .login-item-2 {
-          .ellipse {
+//         .login-item-2 {
+//           .ellipse {
          
-            img {           
+//             img {           
            
               
-            }
-            .nav-text {  
+//             }
+//             .nav-text {  
                
-              h1 {
+//               h1 {
                 
                
-              }
-              span {   
+//               }
+//               span {   
                    
                 
-              }
-            }
-          }
+//               }
+//             }
+//           }
           
-        }
-      }
-    }
-  }
-}
+//         }
+//       }
+//     }
+//   }
+// }

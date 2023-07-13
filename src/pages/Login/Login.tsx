@@ -14,16 +14,19 @@ export default function Login({}: Props) {
     <section className="login">
       <div className="row">
         <LoginForm />
-        <div className="right-side">
-          <div className="login-item-2 ">
+        <div className="rightSide">
+          <div className="rightSide__content ">
             <div className="ellipse">
-              <img src="/Image/theme1.svg" alt="..." />
-              <div className="nav-text">
+              <img
+                className="ellipse__image"
+                src="/Image/theme1.svg"
+                alt="..."
+              />
+              <div className="ellipse__description">
                 <h1>Connect with any photographer.</h1>
                 <span>Everything you need is an internet connection.</span>
               </div>
             </div>
-           
           </div>
         </div>
       </div>

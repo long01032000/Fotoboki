@@ -13,17 +13,20 @@ export default function ForgotPassword({}: Props) {
   return (
     <section className="forgot-password">
       <div className="row">
-        <ForgotPasswordForm/>
-        <div className="right-side">
-          <div className="forgot-password-item-2 ">       
-          <div className="ellipse">
-              <img src="/Image/theme3.svg" alt="..." />
-              <div className="nav-text">
-              <h1>Forgot your password?</h1>
-                  <span>You can get them back easily.</span>
+        <ForgotPasswordForm />
+        <div className="rightSide">
+          <div className="rightSide__content ">
+            <div className="ellipse">
+              <img
+                className="ellipse__image"
+                src="/Image/theme3.svg"
+                alt="..."
+              />
+              <div className="ellipse__description">
+                <h1>Forgot your password?</h1>
+                <span>You can get them back easily.</span>
               </div>
-            </div>    
-           
+            </div>
           </div>
         </div>
       </div>

@@ -1,38 +1,35 @@
 @import "../themes/_variable.scss";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    
-    @media screen and (max-width: 1000px) {
-      .row {      
-        background-color: $color-background-3;
-        .left-side{
-          width: 100%;
-        }
-        .right-side {
-          display: none;
-        }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+ 
+
+  @media screen and (max-width: 1000px) {
+    .row {
+      .leftSide {
+        width: 100%!important;
       }
-      
+      .rightSide {
+        display: none;
+      }
     }
   }
-  
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  span {
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  html {
-  }
-  
-  body {
-  }
-  
-  
+}
+
+h1,
+h2,
+h3,
+h4,
+span,
+input {
+  font-family: "Poppins", sans-serif !important;
+}
+
+html {
+}
+
+body {
+}

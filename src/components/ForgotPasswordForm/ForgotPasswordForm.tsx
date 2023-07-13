@@ -32,7 +32,7 @@ export default function ForgotPasswordForm({}: Props) {
   };
 
   return (
-    <div className="left-side">
+    <div className="leftSide">
         <div className="backToHome">
      <Space direction="vertical">
       <Space wrap>

@@ -1,9 +1,6 @@
-.left-side {
+.leftSide {
   background: $color-background-3;
   width: 50%;
-  height: 100vh;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -11,32 +8,20 @@
   justify-content: center;
   .backToHome{
     position: absolute;
-    left: 20px;
+    right: 20px;
     top: 20px;
-    .ant-space{
-      .ant-space-item{
-        .ant-btn{
-          background-color: $color-background-1;
-          font-size: 14px;
-          height: 40px;
-          width: 40px;
-          padding: 0px 0px 3px 0;
-          border-radius: 6px;
-          .ant-btn-icon{
-            .anticon{
-              svg{
-                width: 25px;
-                height: 25px;
-               
-              }
-            }
-            .ant-btn-loading-icon{
-             
-            }
-          }
-        }
-      }
+   span{
+    :hover{
+      color: $color-secondary-3;
     }
+    svg{
+      width: 2.188rem;
+      height: 2.188rem;
+      color: $color-secondary-1;
+      cursor: pointer;
+      
+    }
+   }
   }
   .login-item-1 {
     display: flex;
@@ -406,7 +391,7 @@
         width: 335px;
         padding-left: 0.5rem;
         h1 {
-          @include text($fs-text-6, $fw-7, $color-text-1, $lh-1);
+          @include text($fs-title-3, $fw-7, $color-text-1, $lh-1);
         }
         span {
           @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);

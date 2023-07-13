@@ -1,275 +1,470 @@
-.left-side {
-  width: 50%;
-  height: 100vh;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  .register-item-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-    .title {
-      width: 29.813rem;
-      height: 4.25rem;
-      h1 {
-        @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
-      }
-      span {
-        @include text($fs-body-1, $fw-4, $color-text-4, $lh-2);
-      }
-    }
+// //Format Code cái nào chung quăng ra ngoài | Cái nào trùng xóa | Đổi tên BEM | 
 
-    .register-form {
-      padding-top: 0.5rem;
-      .ant-form {
-        .ant-form-item {
-          .ant-row {
-            .ant-col {
-              .ant-form-item-control-input {
-                flex-direction: column;
-                .ant-form-item-control-input-content {
-                  button {
-                    width: 28.313rem;
-                    height: 4rem;
-                    background: $color-background-1;
-                    border-radius: 10px;
-                    span {
-                      @include text(
-                        $fs-body-1,
-                        $fw-7,
-                        $color-background-3,
-                        $lh-2
-                      );
-                    }
-                  }
-                  .register-text {
-                    padding-top: 20px;
-                    @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
-                    a {
-                      text-decoration: none;
 
-                      @include text($fs-text-1, $fw-7, $color-primary-main-1);
-                    }
-                  }
-                  padding: 0 12px;
-                  .ant-input-affix-wrapper {
-                    align-items: center;
-                    gap: 10px;
-                    color: $color-button-solid-1;
-                    width: 28.313rem;
-                    height: 4rem;
-                    padding: 10px 0;
-                    background: rgba(250, 116, 54, 0.1);
-                    border: 2px solid $color-button-solid-1;
-                    border-radius: 10px;
-                    .ant-input-prefix {
-                      margin-inline-end: 0;
-                      img {
-                        width: 1.563rem;
-                        height: 1.563rem;
-                      }
-                    }
-                    ::placeholder {
-                      @include text($fs-body-2, $fw-4, $color-button-solid-1);
-                    }
-                    .ant-input-suffix {
-                      margin-inline-start: 0;
-                      span {
-                        color: $color-button-solid-1;
-                        svg {
-                          /* eye-slash */
-                          width: 1.563rem;
-                          height: 1.563rem;
-                        }
-                      }
-                    }
-                    input {
-                      width: 22rem;
-                      background: none;
-                      cursor: inherit;
-                      box-shadow: inset 0 0 0 1px transparent,
-                        inset 0 0 0 100px transparent;
-                    }
-                    input:-webkit-autofill,
-                    input:-webkit-autofill:focus {
-                      transition: background-color 600000s 0s, color 600000s 0s;
-                      font-family: "Poppins", sans-serif;
-                    }
-                  }
-                  .ant-checkbox-wrapper {
-                    
-                    .ant-checkbox {
-                      
-                      .ant-checkbox-input {
-                        width: 16px;
-                        height: 16px;
-                        border: 2px solid $color-button-solid-1;
-                      }
-                      .ant-checkbox-inner {
-                        border: 1px solid $color-button-solid-1;
-                      }
-                    }
-                    span { 
-                      
-                      @include text($fs-text-1,$fw-4, $color-text-4,$lh-2);
-                    }
-                    .ant-checkbox-checked {
-                      .ant-checkbox-inner {
-                        background-color: $color-background-1;
-                      }
-                    }
-                    .ant-checkbox-checked:after {
-                      border: 2px solid $color-background-1;
-                    }
-                  }
-                  .terms-and-conditions {
-                    padding-right: 11.813rem;
-                    @include text($fs-text-1,$fw-5, $color-primary-main-1,$lh-2); 
-                    text-decoration: none;
-                    
-                  }
-                }
-              }
-              div {
-                .ant-form-item-explain {
-                  .ant-form-item-explain-error {
-                    padding: 0 15px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
-//------------------------------------------Responsive----------------------------------//
 
-//Screen 1536px
-@media screen and  (min-width: 1200px)  {
-  .left-side {
-    width: 50%;
-    height: 100vh;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    .register-item-1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .title {
-        h1 {
-          
-        }
-        span {
-          
-        }
-      }
+// //------------------------------------------Responsive----------------------------------//
+// @media screen and (min-width: 280px) {
+//   .leftSide {
+//     display: flex;
+//     flex-direction: column;
+//     align-content: center;
+//     align-items: center;
+//     justify-content: center;
+//     .register-item-1 {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       padding-top: 1rem;
+//       .title {
+//         h1 {
+//           padding: 0.5rem 1.375rem 0.3rem 0;
+//           @include text($fs-title-3, $fw-7, $color-text-1, $lh-1);
+//         }
+//         span {
+//           padding: 0 7.5rem 0 0;
+//           @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+//         }
+//       }
+//       .register-form {
+//         width: 100%;
+//         padding-top: 0.77rem;
+//         .ant-form {
+//           .ant-form-item {
+//             padding: 0 1rem;
+//             margin-bottom: 0.625rem;
+//             .ant-row {
+//               .ant-col {
+//                 .ant-form-item-control-input {
+//                   flex-direction: column;
+//                   .ant-form-item-control-input-content {
+//                     width: 100%;
+//                     button {
+//                       padding: 1rem 0 2.5rem 0;
+//                       width: 100%;
+//                       background: $color-background-1;
+//                       border-radius: 0.625rem;
+//                       span {
+//                         @include text(
+//                           $fs-text-1,
+//                           $fw-7,
+//                           $color-background-3,
+//                           $lh-2
+//                         );
+//                       }
+//                     }
+//                     .register-text {
+//                       text-align: center;
+//                       padding-top: 1.25rem;
+//                       @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
+//                       a {
+//                         @include text(
+//                           $fs-text-min,
+//                           $fw-7,
+//                           $color-primary-main-1
+//                         );
+//                       }
+//                     }
+//                     .ant-input-affix-wrapper {
+//                       align-items: center;
+//                       gap: 0.625rem;
+//                       color: $color-button-solid-1;
+//                       padding: 0.9rem 0.7rem 0.9rem 0;
+//                       background: rgba(250, 116, 54, 0.1);
+//                       border: 0.125rem solid $color-button-solid-1;
+//                       border-radius: 0.625rem;
+//                       .ant-input-prefix {
+//                         margin-inline-end: 0;
+//                         img {
+//                           width: 1.563rem;
+//                           height: 1.563rem;
+//                         }
+//                       }
+//                       ::placeholder {
+//                         @include text($fs-text-1, $fw-4, $color-button-solid-1);
+//                       }
+//                       .ant-input-suffix {
+//                         margin-inline-start: 0;
+//                         span {
+//                           color: $color-button-solid-1;
+//                           svg {
+//                             /* eye-slash */
+//                             width: 1.563rem;
+//                             height: 1.563rem;
+//                           }
+//                         }
+//                       }
+//                       input {
+//                         padding: 0 0.1rem;
+//                         background: none;
+//                         cursor: inherit;
+//                         @include text($fs-text-1, $fw-5, $color-text-4);
+//                       }
+//                     }
+//                     .ant-checkbox-wrapper {
+//                       padding: 0 0 0.875rem 0;
+//                       .ant-checkbox {
+//                         .ant-checkbox-input {
+//                           width: 1rem;
+//                           height: 1rem;
+//                           border: 0.125rem solid $color-button-solid-1; // trùng color 
+//                         }
+//                         .ant-checkbox-inner {
+//                           width: 1rem;
+//                           height: 1rem;
+//                           border: 0.063rem solid $color-button-solid-1;
+//                         }
+//                       }
+//                       span {
+//                         @include text(
+//                           $fs-text-min,
+//                           $fw-4,
+//                           $color-text-4,
+//                           $lh-2
+//                         );
+//                       }
+//                       .ant-checkbox-checked {
+//                         .ant-checkbox-inner {
+//                           width: 1.2rem;
+//                           height: 1.2rem;
+//                           background-color: $color-background-1;
+//                         }
+//                       }
+//                       .ant-checkbox-checked:after {
+//                         border: 2px solid $color-background-1;
+//                       }
+//                     }
+//                     .terms-and-conditions {
+//                       padding-right: 5.613rem;
+//                       @include text(
+//                         $fs-text-min,
+//                         $fw-6,
+//                         $color-primary-main-1,
+//                         $lh-2
+//                       );
+//                     }
+//                   }
+//                 }
+//                 div {
+//                   .ant-form-item-explain {
+//                     .ant-form-item-explain-error {
+//                       font-size: 0.688rem;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (min-width: 768px) {
+//   .leftSide{width: 50%;
+//     .register-item-1 {
+//       padding-top: 1.5rem;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       .title {
+//         h1 {
+//           padding: 0.5rem 5.375rem 0.3rem 0;
+//           @include text($fs-title-3, $fw-7, $color-text-1, $lh-1);
+//         }
+//         span {
+//           padding: 0 13.5rem 0 0;
+//           @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+//         }
+//       }
+//       .register-form {
+//         width: 100%;
+//         padding-top: 0.77rem;
+//         .ant-form {
+//           .ant-form-item {
+//             padding: 0 0.65rem;
+//             margin-bottom: 0.625rem;
+//             .ant-row {
+//               .ant-col {
+//                 .ant-form-item-control-input {
+//                   flex-direction: column;
+//                   .ant-form-item-control-input-content {
+//                     width: 100%;
   
-      .register-form {
-        
-        .ant-form {
-          .ant-form-item {
-            .ant-row {
-              .ant-col {
-                .ant-form-item-control-input {
-                  .ant-form-item-control-input-content {
-                    button {
-                     
-                      span {
-                        
-                      }
-                    }
-                    .register-text {
-                     
-                      }
-                     
-                      
-                      a {
-                        
-                        
-                      }
-                    }
-                    
-                    .ant-input-affix-wrapper {
-                     
-                      
-                      .ant-input-prefix {
-                        img {
-                         
-                        }
-                      }
-                      ::placeholder {
-                        @include text($fs-text-1,$fw-4, $color-button-solid-1,);
-                      }
-                      .ant-input-suffix {
-                        span {
-                          
-                          svg {
-                            /* eye-slash */
-                           
-                          }
-                        }
-                      }
-                      input {
-                        
-                      }
-                      input:-webkit-autofill,
-                      input:-webkit-autofill:focus {
-                        transition: background-color 600000s 0s, color 600000s 0s;
-                        font-family: "Poppins", sans-serif;
-                      }
-                    }
-                    .ant-checkbox-wrapper {
+//                     button {
+//                       padding: 1rem 0 2.5rem 0;
+//                       width: 100%;
+//                       background: $color-background-1;
+//                       border-radius: 0.625rem;
+//                       span {
+//                         @include text(
+//                           $fs-text-1,
+//                           $fw-7,
+//                           $color-background-3,
+//                           $lh-2
+//                         );
+//                       }
+//                     }
+//                     .register-text {
+//                       text-align: center;
+//                       padding-top: 1.25rem;
+//                       @include text($fs-text-min, $fw-4, $color-text-4, $lh-2);
+//                       a {
+//                         @include text(
+//                           $fs-text-min,
+//                           $fw-7,
+//                           $color-primary-main-1
+//                         );
+//                       }
+//                     }
   
-                      .ant-checkbox {
-                        .ant-checkbox-input {
-                         
-                        }
-                        .ant-checkbox-inner {
-                          
-                        }
-                      }
-                      span { 
-                        
-                      }
-                      .ant-checkbox-checked {
-                        .ant-checkbox-inner {
-                          
-                        }
-                      }
-                      .ant-checkbox-checked:after {
-                      
-                      }
-                    }
-                    .terms-and-conditions {
-                     
-                    }
-                  }
-                }
-                div {
-                  .ant-form-item-explain {
-                    .ant-form-item-explain-error {
-                     
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-}
+//                     .ant-input-affix-wrapper {
+//                       align-items: center;
+//                       gap: 0.625rem;
+//                       color: $color-button-solid-1;
+//                       padding: 0.9rem 0.7rem 0.9rem 0;
+//                       background: rgba(250, 116, 54, 0.1);
+//                       border: 0.125rem solid $color-button-solid-1;
+//                       border-radius: 0.625rem;
+//                       .ant-input-prefix {
+//                         margin-inline-end: 0;
+//                         img {
+//                           width: 1.563rem;
+//                           height: 1.563rem;
+//                         }
+//                       }
+//                       ::placeholder {
+//                         @include text($fs-text-1, $fw-4);
+//                       }
+//                       .ant-input-suffix {
+//                         margin-inline-start: 0;
+//                         span {                      
+//                           svg {
+//                             /* eye-slash */
+//                             width: 1.563rem;
+//                             height: 1.563rem;
+//                           }
+//                         }
+//                       }
+//                       input {
+//                         padding: 0 0.1rem;
+//                         background: none;
+//                         cursor: inherit;
+//                         @include text($fs-text-1, $fw-5, $color-text-4);
+//                       }
+//                     }
+//                     .ant-checkbox-wrapper {
+//                       padding: 0 0 0.875rem 0;
+//                       .ant-checkbox {
+//                         .ant-checkbox-input {
+//                           width: 1rem;
+//                           height: 1rem;
+//                           border: 0.125rem solid $color-button-solid-1;
+//                         }
+//                         .ant-checkbox-inner {
+//                           width: 1rem;
+//                           height: 1rem;
+//                           border: 0.063rem solid $color-button-solid-1;
+//                         }
+//                       }
+//                       span {
+//                         @include text(
+//                           $fs-text-min,
+//                           $fw-4,
+//                           $color-text-4,
+//                           $lh-2
+//                         );
+//                       }
+//                       .ant-checkbox-checked {
+//                         .ant-checkbox-inner {
+//                           width: 1.2rem;
+//                           height: 1.2rem;
+//                           background-color: $color-background-1;
+//                         }
+//                       }
+//                       .ant-checkbox-checked:after {
+//                         border: 2px solid $color-background-1;
+//                       }
+//                     }
+//                     .terms-and-conditions {
+//                       @include text(
+//                         $fs-text-min,
+//                         $fw-6,
+//                         $color-primary-main-1,
+//                         $lh-2
+//                       );
+//                     }
+//                   }
+//                 }
+//                 div {
+//                   .ant-form-item-explain {
+//                     .ant-form-item-explain-error {
+//                       font-size: 0.875rem;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
+// // //Screen 1536px
+// @media screen and (min-width: 1200px) {
+//   .leftSide {
+//     width: 50%;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-content: center;
+//     align-items: center;
+//     justify-content: center;
+//     .register-item-1 {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       padding-top: 1rem;
+//       .title {
+//         h1 {
+//           padding: 0.5rem 3.375rem 0.625rem 0;
+//           @include text($fs-text-3, $fw-7, $color-text-1, $lh-2);
+//         }
+//         span {
+//           padding: 0 13.5rem 0 0;
+//           @include text($fs-body-1, $fw-4, $color-text-4, $lh-2);
+//         }
+//       }
+//       .register-form {
+//         width: 100%;
+//         padding-top: 0.77rem;
+//         .ant-form {
+//           .ant-form-item {
+//             padding: 0 0.75rem 0 0.75rem;
+//             margin-bottom: 0.625rem;
+//             .ant-row {
+//               .ant-col {
+//                 .ant-form-item-control-input {
+//                   flex-direction: column;
+//                   .ant-form-item-control-input-content {
+//                     width: 100%;
+//                     button {
+//                       padding: 1rem 0 2.5rem 0;
+//                       width: 100%;
+//                       background: $color-background-1;
+//                       border-radius: 0.625rem;
+//                       span {
+//                         @include text(
+//                           $fs-body-1,
+//                           $fw-7,
+//                           $color-background-3,
+//                           $lh-2
+//                         );
+//                       }
+//                     }
+//                     .register-text {
+//                       text-align: center;
+//                       padding-top: 1.25rem;
+//                       @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+//                       a {
+//                         text-decoration: none;
+
+//                         @include text($fs-text-1, $fw-7, $color-primary-main-1);
+//                       }
+//                     }
+
+//                     .ant-input-affix-wrapper {
+//                       align-items: center;
+//                       gap: 0.625rem;
+//                       color: $color-button-solid-1;
+//                       padding: 0.85rem 0.7rem 0.85rem 0;
+//                       background: rgba(250, 116, 54, 0.1);
+//                       border: 0.125rem solid $color-button-solid-1;
+//                       border-radius: 0.625rem;
+//                       .ant-input-prefix {
+//                         margin-inline-end: 0;
+//                         img {
+//                           width: 1.563rem;
+//                           height: 1.563rem;
+//                         }
+//                       }
+//                       ::placeholder {
+//                         @include text($fs-body-2, $fw-4, $color-button-solid-1);
+//                       }
+//                       .ant-input-suffix {
+//                         margin-inline-start: 0;
+//                         span {
+//                           color: $color-button-solid-1;
+//                           svg {
+//                             /* eye-slash */
+//                             width: 1.563rem;
+//                             height: 1.563rem;
+//                           }
+//                         }
+//                       }
+//                       input {
+//                         padding: 0 0.425rem;
+//                         background: none;
+//                         cursor: inherit;
+//                         font-family: "Poppins";
+//                         box-shadow: inset 0 0 0 1px transparent,
+//                           inset 0 0 0 100px transparent;
+//                         @include text($fs-body-2, $fw-5, $color-text-4);
+//                       }
+//                     }
+
+//                     .ant-checkbox-wrapper {
+//                       padding: 0 0 0.875rem 0;
+//                       .ant-checkbox {
+//                         .ant-checkbox-input {
+//                           width: 1rem;
+//                           height: 1rem;
+//                           border: 0.125rem solid $color-button-solid-1;
+//                         }
+//                         .ant-checkbox-inner {
+//                           width: 1.2rem;
+//                           height: 1.2rem;
+//                           border: 0.063rem solid $color-button-solid-1;
+//                         }
+//                       }
+//                       span {
+//                         @include text($fs-text-1, $fw-4, $color-text-4, $lh-2);
+//                       }
+//                       .ant-checkbox-checked {
+//                         .ant-checkbox-inner {
+//                           background-color: $color-background-1;
+//                         }
+//                       }
+//                       .ant-checkbox-checked:after {
+//                         border: 2px solid $color-background-1;
+//                       }
+//                     }
+//                     .terms-and-conditions {
+//                       @include text(
+//                         $fs-text-1,
+//                         $fw-5,
+//                         $color-primary-main-1,
+//                         $lh-2
+//                       );
+//                       text-decoration: none;
+//                     }
+//                   }
+//                 }
+//                 div {
+//                   .ant-form-item-explain {
+//                     .ant-form-item-explain-error {
+//                       font-size: 1rem;
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
