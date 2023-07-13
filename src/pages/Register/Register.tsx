@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Checkbox, Form, Input, Select } from "antd";
 import { NavLink } from "react-router-dom";
 import { CloseCircleOutlined } from "@ant-design/icons";
 import ButtonForm from "../../components/ButtonForm/ButtonForm";
 import FormItem from "../../components/FormItem/FormItem";
-
+import SelectForm from "../../components/SelectForm";
+import RightSide from "../../components/UIComponent/sharedUI/RightSide";
+import "./styles.scss";
 export default function Register() {
+  const [role, setRole] = useState<number>(0);
+  //update Roles for user
+  useEffect(() => {
+    switch (role) {
+      case 1:
+        setRole(1);
+        break;
+      case 2:
+        setRole(2);
+        break;
+      case 3:
+        setRole(3);
+        break;
+      case 4:
+        setRole(4);
+        break;
+      default:
+        setRole(0);
+        break;
+    }
+  }, [role]);
+
   const onFinish = (values: any) => {
     console.log("Received values of form: ", values);
   };
@@ -109,16 +133,10 @@ export default function Register() {
                   />
                 </Form.Item>
 
-                <Form.Item name="Role">
-                  <Select placeholder="Role">
-                    <Select.Option value="client">Client</Select.Option>
-                    <Select.Option value="model">Model</Select.Option>
-                    <Select.Option value="photographer">
-                      Photographer
-                    </Select.Option>
-                    <Select.Option value="studio">Studio</Select.Option>
-                  </Select>
+                <Form.Item name="Role" initialValue={role}>
+                  <SelectForm value={role} onChange={setRole} />
                 </Form.Item>
+
                 <Form.Item>
                   <Form.Item name="remember" valuePropName="checked" noStyle>
                     <Checkbox> Accept</Checkbox>
@@ -141,23 +159,11 @@ export default function Register() {
             </div>
           </div>
         </div>
-        <div className="rightSide">
-          <div className="rightSide__content ">
-            <div className="ellipse">
-              <img
-                className="ellipse__image"
-                src="/Image/theme2.svg"
-                alt="..."
-              />
-              <div className="ellipse__description">
-                <h1>Join us!</h1>
-                <span>
-                  Just go through the boring process of creating an account.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <RightSide
+          image="/Image/theme2.svg"
+          title="Join us!"
+          content="Just go through the boring process of creating an account."
+        />
       </div>
     </section>
   );

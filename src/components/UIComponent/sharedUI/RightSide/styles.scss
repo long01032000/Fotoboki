@@ -1,0 +1,36 @@
+@import "../../../../styles/variables/variables";
+
+.rightSide {
+  width: 50%;
+  height: 100vh;
+  background-color: $color-background-1;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  .rightSide__content {
+    .ellipse {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .ellipse__image {
+        width: 60%;
+      }
+      .ellipse__description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          @include text($fs-body-1, $fw-7, $color-background-3, $lh-2);
+        }
+        span {
+          @include text($fs-text-1, $fw-5, $color-text-5, $lh-2);
+        }
+      }
+    }
+  }
+}
