@@ -6,7 +6,7 @@ type Props = {
   name: string;
   children: any;
   message?: string;
-  dependencies: [string];
+  dependencies?: [string];
   required?: boolean;
 };
 

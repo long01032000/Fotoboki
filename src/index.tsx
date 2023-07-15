@@ -2,8 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
 //setup react router dom
-// import 'antd/dist/antd.css';
-import './assets/scss/style.scss';
+import "./styles/global.scss";
+// import './assets/scss/style.scss';
 import HomeTemplate from "./templates/HomeTemplate/HomeTemplate";
 import { BrowserRouter, Routes, Route, Navigate, Outlet, NavLink } from "react-router-dom";
 import Home from "./pages/Home/Home";
@@ -13,6 +13,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import OTP from "./pages/OTP/OTP";
+
 
 // import {} from 'react-router-dom'
 const root = ReactDOM.createRoot(

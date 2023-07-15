@@ -1,0 +1,65 @@
+@import "../../../../styles/variables/variables";
+
+.ant-input-affix-wrapper {
+  align-items: center;
+  gap: 0.625rem;
+  color: $color-button-solid-1;
+  padding: 0.85rem 0.7rem 0.85rem 0;
+  background: rgba(250, 116, 54, 0.1);
+  border: 0.125rem solid $color-button-solid-1;
+  border-radius: 0.625rem;
+  .ant-input-prefix {
+    margin-inline-end: 0;
+    img {
+      width: 1.563rem;
+      height: 1.563rem;
+    }
+  }
+  @media screen and (min-width: 280px) {
+    ::placeholder {
+      
+      @include text($fs-text-1, $fw-4, $color-button-solid-1);
+    }
+  }
+  @media screen and (min-width: 720px) {
+    ::placeholder {
+      @include text($fs-text-1, $fw-4, $color-button-solid-1);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    ::placeholder {
+      @include text($fs-body-2, $fw-4, $color-button-solid-1);
+    }
+  }
+  .ant-input-suffix {
+    margin-inline-start: 0;
+    .anticon.ant-input-password-icon {
+      color: $color-button-solid-1;
+      svg {
+        /* eye-slash */
+        width: 1.563rem;
+        height: 1.563rem;
+      }
+    }
+  }
+  input.ant-input {
+    padding: 0 0.225rem 0 0;
+    background: none;
+    cursor: inherit;
+
+    box-shadow: inset 0 0 0 1px transparent, inset 0 0 0 100px transparent;
+    @include text($fs-body-2, $fw-5, $color-text-4);
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+}
+
+.ant-input-affix-wrapper:not(:disabled):hover {
+  border-color: $color-button-solid-1;
+  border-inline-end-width: 2px;
+  z-index: 1;
+}
+
+//------------------------Responsive input------------------------

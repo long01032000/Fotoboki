@@ -5,14 +5,12 @@
   font-family: "Poppins", sans-serif;
 
   @media screen and (max-width: 1000px) {
-    .row {
       .leftSide {
         width: 100% !important;
       }
       .rightSide {
         display: none;
       }
-    }
   }
 }
 

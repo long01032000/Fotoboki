@@ -4,8 +4,8 @@ import { Select } from "antd";
 import { Roles } from "../../interface/enum-list";
 
 export interface ISelectForm {
-  value: number;
-  onChange: Dispatch<SetStateAction<number>>;
+  value: number | undefined;
+  onChange: Dispatch<SetStateAction<number | undefined>> ;
 }
 
 const SelectForm = ({ value, onChange }: ISelectForm) => {

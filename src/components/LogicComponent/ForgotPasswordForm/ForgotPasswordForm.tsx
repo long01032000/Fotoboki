@@ -4,9 +4,8 @@ import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { LeftCircleOutlined } from '@ant-design/icons';
 
-type Props = {};
 
-export default function ForgotPasswordForm({}: Props) {
+export default function ForgotPasswordForm() {
   const navigate = useNavigate();
   const [loadings, setLoadings] = useState<boolean[]>([]);
 

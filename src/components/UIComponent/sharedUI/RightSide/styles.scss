@@ -6,6 +6,23 @@
   background-color: $color-background-1;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  .backToHome{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+   span{
+    :hover{
+      color: $color-secondary-3;
+    }
+    svg{
+      width: 2.188rem;
+      height: 2.188rem;
+      color: $color-secondary-1;
+      cursor: pointer;
+      
+    }
+   }
+  }
   .rightSide__content {
     .ellipse {
       height: 100vh;

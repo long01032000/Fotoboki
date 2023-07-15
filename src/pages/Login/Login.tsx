@@ -3,7 +3,7 @@ import RightSide from "../../components/UIComponent/sharedUI/RightSide";
 
 export default function Login() {
   return (
-    <section className="login">
+    <section className="container">
       <LoginForm />
       <RightSide
         image="/Image/theme1.svg"

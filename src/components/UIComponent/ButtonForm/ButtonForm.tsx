@@ -1,16 +1,17 @@
 import React from "react";
 import { Button } from "antd";
+import "./styles.scss";
 
 type Props = {
-  classname: string;
-  children : string
+  name: string;
+  children : string 
 };
 
-export default function ButtonForm({classname,children}: Props) {
+export default function ButtonForm({name,children}: Props) {
   return (
     <Button 
     htmlType="submit"
-    className={`${classname}`}>
+    className={`${name}`}>
       {`${children}`}
     </Button>
   );

@@ -1,0 +1,21 @@
+@import "../../../styles/variables/variables";
+
+.ant-btn {  
+    padding: 1rem 0 2.5rem 0;
+    width: 100%;
+    background: $color-background-1;
+    border-radius: 0.625rem;
+    @include text(
+      $fs-body-1,
+      $fw-7,
+      $color-background-3,
+      $lh-2
+    );
+  }
+  .ant-btn:not(:disabled):hover{
+      color:$color-background-3;
+      border-color:$color-button-solid-1;
+  }
+  
+  
+  
