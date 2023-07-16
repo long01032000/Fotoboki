@@ -1,31 +1,11 @@
-import { Button, Space } from "antd";
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { LeftCircleOutlined } from "@ant-design/icons";
+import "./styles.scss";
+import ButtonForm from "../../UIComponent/ButtonForm/ButtonForm";
+
 
 let currentOTPIndex: number = 0;
 
 export default function OtpForm() {
-  const navigate = useNavigate();
-  const [loadings, setLoadings] = useState<boolean[]>([]);
-
-  const enterLoading = (index: number) => {
-    setLoadings((prevLoadings) => {
-      const newLoadings = [...prevLoadings];
-      newLoadings[index] = true;
-      return newLoadings;
-    });
-
-    setTimeout(() => {
-      setLoadings((prevLoadings) => {
-        const newLoadings = [...prevLoadings];
-        newLoadings[index] = false;
-        return newLoadings;
-      });
-      navigate("/home");
-    }, 2000);
-  };
-
   const [otp, setOtp] = useState<string[]>(new Array(6).fill(""));
   const [activeOTPIndex, setActiveOTPIndex] = useState<number>(0);
 
@@ -58,51 +38,36 @@ export default function OtpForm() {
 
   return (
     <div className="leftSide">
-      <div className="backToHome">
-        <Space direction="vertical">
-          <Space wrap>
-            <Button
-              type="primary"
-              icon={<LeftCircleOutlined />}
-              loading={loadings[2]}
-              onClick={() => {
-                enterLoading(2);
-              }}
-            />
-          </Space>
-        </Space>
-      </div>
-      <div className="otp-item-1">
-        <div className="title">
+      <div className="leftSide__content">
+        <div className="otpTitle">
           <h1>Enter OTP</h1>
-          <span>
-            Sent OTP on <span className="nav-text">alo123@gmail.com</span>
+          <span className="otpTitle__nav">
+            Sent OTP on{" "}
+            <span className="otpTitle__nav--text">alo123@gmail.com</span>
           </span>
         </div>
-        <div className="otp-content">
+        <div className="otpForm">
           {otp.map((_, index) => {
             return (
               <React.Fragment key={index}>
                 <input
                   ref={index === activeOTPIndex ? inputRef : null}
                   type="number"
-                  className="otp-button"
+                  className="otpForm__input"
                   onChange={handleOnChange}
                   onKeyDown={(e) => handleOnKeyDown(e, index)}
                   value={otp[index]}
                 />
                 {index === otp.length - 1 ? null : (
-                  <span className="w-4 py-0.5 bg-gray-400"></span>
+                  <span></span>
                 )}
               </React.Fragment>
             );
           })}
         </div>
-        <div className="submit-button">
-          <Button htmlType="submit" className="submit-button">
-            SUBMIT
-          </Button>
-          <div className="check text-center">Resent OTP</div>
+        <div className="otpButton">
+          <ButtonForm name="otpButton__submit">SUBMIT</ButtonForm>
+          <div className="otpButton__resend ">Resent OTP</div>
         </div>
       </div>
     </div>

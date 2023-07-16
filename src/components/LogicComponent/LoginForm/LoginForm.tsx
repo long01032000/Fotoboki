@@ -94,7 +94,7 @@ export default function LoginForm() {
                 LOG IN
               </ButtonForm>
               <div className="loginForm__button--text">
-                Don’t have account?
+                Don’t have account? {" "}
                 <NavLink to="/register">Create an account</NavLink>
               </div>
             </Form.Item>

@@ -27,13 +27,11 @@
                 padding: 0 0 0.875rem 0;
                 .ant-checkbox {
                   .ant-checkbox-input {
-                    width: 1rem;
-                    height: 1rem;
+                    width: 1.2rem;
+                    height: 1.2rem;
                     border: 0.125rem solid $color-button-solid-1;
                   }
                   .ant-checkbox-inner {
-                    width: 1.2rem;
-                    height: 1.2rem;
                     border: 0.063rem solid $color-button-solid-1;
                   }
                 }
@@ -42,7 +40,7 @@
                 }
                 .ant-checkbox-checked {
                   .ant-checkbox-inner {
-                    background-color: $color-background-1;
+                    background-color: $color-background-1 ;
                   }
                 }
                 .ant-checkbox-checked:after {

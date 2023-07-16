@@ -46,6 +46,14 @@
           flex-direction: column;
           .ant-form-item-control-input-content {
             width: 100%;
+            .ant-checkbox-checked {
+              .ant-checkbox-inner {
+                background-color: $color-background-1 ;
+              }
+            }
+            .ant-checkbox-checked:after {
+              border: 2px solid $color-background-1 ;
+            }
           }
         }
         .ant-form-item-explain {
@@ -67,14 +75,6 @@
       .ant-checkbox-inner {
         border: 0.063rem solid $color-button-solid-1;
       }
-    }
-    .ant-checkbox-checked {
-      .ant-checkbox-inner {
-        background-color: $color-background-1;
-      }
-    }
-    .ant-checkbox-checked:after {
-      border: 2px solid $color-background-1;
     }
   }
 }

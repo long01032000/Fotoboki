@@ -3,7 +3,7 @@ import RightSide from "../../components/UIComponent/sharedUI/RightSide";
 import "./styles.scss";
 export default function OTP() {
   return (
-    <section className="otp">
+    <section className="container">
       <OtpForm />
       <RightSide
         image="/Image/theme3.svg"

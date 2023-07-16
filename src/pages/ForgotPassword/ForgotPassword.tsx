@@ -7,15 +7,13 @@ export default function ForgotPassword() {
   };
 
   return (
-    <section className="forgot-password">
-      <div className="row">
+    <section className="container">
         <ForgotPasswordForm />
         <RightSide
           image="/Image/theme3.svg"
           title="Forgot your password?"
           content="You can get them back easily."
         />
-      </div>
     </section>
   );
 }
